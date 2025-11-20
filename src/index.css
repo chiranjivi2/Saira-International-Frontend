@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"); */
+
+:root {
+  --color-grey-0: #fff;
+  --color-grey-50: #f9fafb;
+  --color-grey-100: #f3f4f6;
+  --color-grey-200: #e5e7eb;
+  --color-grey-300: #d1d5db;
+  --color-grey-400: #9ca3af;
+  --color-grey-500: #6b7280;
+  --color-grey-600: #4b5563;
+  --color-grey-700: #374151;
+  --color-grey-800: #1f2937;
+  --color-grey-900: #111827;
+
+  --color-primary: #084169;
+
+  --color-primary-50: #e7ebee;
+  --color-primary-100: #cfd7dd;
+  --color-primary-150: #889cab;
+  --color-primary-200: #70889a;
+  --color-primary-250: #587489;
+  --color-primary-300: #416079;
+  --color-primary-400: #294c68;
+  --color-primary-500: #113857;
+  --color-primary-600: #0f324e;
+  --color-primary-700: #0c273d;
+
+  --color-secondary-0: #eaf2f6;
+  --color-secondary-50: #d5e5ed;
+  --color-secondary-100: #c0d8e5;
+  --color-secondary-150: #abcbdc;
+  --color-secondary-200: #96bed3;
+  --color-secondary-300: #81b0ca;
+  --color-secondary-350: #6ca3c1;
+  --color-secondary-400: #5796b9;
+  --color-secondary-450: #4289b0;
+  --color-secondary-500: #2d7ca7;
+  --color-secondary-600: #297096;
+  --color-secondary-700: #246386;
+  --color-secondary-800: #1f5775;
+  --color-secondary-850: #1b4a64;
+  --color-secondary-900: #173e54;
+}

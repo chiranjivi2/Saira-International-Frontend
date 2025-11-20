@@ -1,0 +1,84 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints:
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* // hat-color: ##0f3751; */
+/* top of S : #084169;
+#071f3f
+middle of s : #084973;
+#03203e
+lower of s : #317daa; */
+
+/* primary-color: #113857 */
+/* secondary-color:#3380aa  #2d7ca7 */
+
+/* --color-secondary-0: #eaf2f6;
+--color-secondary-50: #d5e5ed;
+--color-secondary-100: #c0d8e5;
+--color-secondary-150: #abcbdc;
+--color-secondary-200: #96bed3;
+--color-secondary-300: #81b0ca;
+--color-secondary-350: #6ca3c1;
+--color-secondary-400: #5796b9;
+--color-secondary-450: #4289b0;
+--color-secondary-500: #2d7ca7;
+--color-secondary-600: #297096;
+--color-secondary-700: #246386;
+--color-secondary-800: #1f5775;
+--color-secondary-850: #1b4a64;
+--color-secondary-900: #173e54; */
