@@ -4,14 +4,14 @@ import { FaInstagram, FaRegCopyright, FaWhatsapp } from "react-icons/fa";
 function Footer() {
   return (
     <section className="pt-16 pb-5 bg-[var(--color-primary-500)] text-[var(--color-primary-50)]">
-      <div className="max-w-[1200px] px-8 mx-auto">
+      <div className="max-w-[1200px] px-4 sm:px-8 mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 gap-y-8 lg:grid-cols-4 justify-items-center mb-16">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10  lg:grid-cols-4 justify-items-center mb-16">
           {/* Company Info */}
-          <div className="space-y-5">
+          <div className="space-y-2 sm:space-y-5">
             <div className="">
               <img
-                className="h-20 filter brightness-0 invert  "
+                className="h-18 sm:h-20 filter brightness-0 invert  "
                 src="Saira_logo.png"
                 alt="Saira International Education & Visa Services."
               />
@@ -19,7 +19,7 @@ function Footer() {
             <p className="text-xl leading-relaxed font-light">
               Saira International Education & Consultancy
             </p>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-2 sm:gap-4 pt-2">
               <a
                 href="https://www.facebook.com/profile.php?id=61583529039472"
                 target="_blank"
@@ -50,10 +50,10 @@ function Footer() {
           </div>
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">
+            <h3 className="text-xl font-semibold text-white mb-3 sm:mb-6 ">
               Quick Links
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
                   href="#"
@@ -123,8 +123,10 @@ function Footer() {
 
           {/*Services */}
           <div className="w-full md:pl-12 lg:w-auto lg:pl-0">
-            <h3 className="text-xl text-white font-semibold  mb-6">Services</h3>
-            <ul className="space-y-3">
+            <h3 className="text-xl text-white font-semibold mb-3 sm:mb-6">
+              Services
+            </h3>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
                   href="#"
@@ -147,11 +149,11 @@ function Footer() {
           {/* Explore countries */}
 
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">
+            <h3 className="text-xl font-semibold text-white mb-3 sm:mb-6">
               Explore Countries
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
                   href="#"

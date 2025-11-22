@@ -9,12 +9,13 @@ function Jobs() {
           <div className="w-12 h-1 bg-[var(--color-primary-500)] mx-auto "></div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center items-center ">
-          <div className="rounded-xl overflow-hidden sm:w-3/4 w-full ">
+          <div className="relative group rounded-xl overflow-hidden sm:w-3/4 w-full ">
             <img
-              className="lg:h-[400px] object-cover"
+              className="lg:h-[400px]  h-full object-cover transition-transform duration-700 group-hover:scale-110"
               src="ourservices/work_abroad.jpg"
               alt="study abroad"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           <div className="text-lg text-justify">
             <p className="mb-2">

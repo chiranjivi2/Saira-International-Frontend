@@ -9,7 +9,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center h-[80px]  px-12 bg-[var(--color-grey-50)]">
+    <nav className="flex justify-between items-center h-[80px] px-4 sm:px-8 md:px-12 bg-[var(--color-grey-50)]">
       <div className="h-full">
         <img src="Saira_logo.png" className="h-full" />
       </div>
