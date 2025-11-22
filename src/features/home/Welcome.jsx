@@ -10,11 +10,13 @@ function Welcome() {
           Saira International Education and Consultancy
         </h2>
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 items-center p-6">
-          <div className="justify-items-center overflow-hidden rounded-2xl ">
+          <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
             <img
               src="working_professional_in_office.jpeg"
-              className="object-cover w-full transition-all duration-700  hover:scale-110 "
+              alt="Education"
+              className="w-full lg:h-[450px] h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           <div className="">
             <p className="text-justify text-lg leading-8 mb-8">
