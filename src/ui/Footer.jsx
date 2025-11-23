@@ -96,10 +96,10 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="faq"
+                  href="uploaddocuments"
                   className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
                 >
-                  FAQ
+                  Upload Documents
                 </a>
               </li>
               <li>

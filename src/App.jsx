@@ -4,12 +4,13 @@ import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import FAQ from "./pages/FAQ";
+
 import Universities from "./pages/Universities";
 import News from "./pages/News";
 import PageNotFound from "./pages/PageNotFound";
 import OurServices from "./pages/OurServices";
 import VisaInfo from "./pages/VisaInfo";
+import UploadDocuments from "./pages/UploadDocuments";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="ourservices" element={<OurServices />} />
           <Route path="visainfo" element={<VisaInfo />} />
           <Route path="universities" element={<Universities />} />
-          <Route path="faq" element={<FAQ />} />
+          <Route path="uploaddocuments" element={<UploadDocuments />} />
           <Route path="news" element={<News />} />
           <Route path="contactus" element={<ContactUs />} />
         </Route>

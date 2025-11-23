@@ -72,13 +72,13 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/faq"
+            to="/uploaddocuments"
             className={({
               isActive,
             }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
               ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
           >
-            FAQ
+            Upload Documents
           </NavLink>
         </li>
         <li>

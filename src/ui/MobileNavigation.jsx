@@ -37,8 +37,8 @@ function MobileNavigation({ setIsOpen }) {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/faq" onClick={() => setIsOpen(false)}>
-            FAQ
+          <NavLink to="/uploaddocuments" onClick={() => setIsOpen(false)}>
+            Upload Documents
           </NavLink>
         </li>
         <li>
