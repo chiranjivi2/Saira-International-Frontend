@@ -11,6 +11,7 @@ import PageNotFound from "./pages/PageNotFound";
 import OurServices from "./pages/OurServices";
 import VisaInfo from "./pages/VisaInfo";
 import UploadDocuments from "./pages/UploadDocuments";
+import StudentForm from "./features/upload documents/StudentForm";
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
           <Route path="uploaddocuments" element={<UploadDocuments />} />
           <Route path="news" element={<News />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="/studentform" element={<StudentForm />} />
         </Route>
-
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

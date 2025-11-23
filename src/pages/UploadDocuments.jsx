@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import Footer from "../ui/Footer";
 
 function UploadDocuments() {
+  const navigate = useNavigate();
   return (
     <>
       <section className="bg-[var(--color-primary-500)] text-[var(--color-primary-50)]">
@@ -25,7 +27,10 @@ function UploadDocuments() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div>
-                <button className="bg-[var(--color-primary-400)]  px-5 py-2 text-[var(--color-primary-50)] font-bold cursor-pointer rounded-sm mx-auto shadow-md hover:bg-[var(--color-primary-600)] hover:shadow-xl transition-all duration-300">
+                <button
+                  className="bg-[var(--color-primary-400)]  px-5 py-2 text-[var(--color-primary-50)] font-bold cursor-pointer rounded-sm mx-auto shadow-md hover:bg-[var(--color-primary-600)] hover:shadow-xl transition-all duration-300"
+                  onClick={() => navigate("/studentform")}
+                >
                   For Students{" "}
                 </button>
               </div>
