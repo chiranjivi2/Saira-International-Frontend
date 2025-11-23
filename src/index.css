@@ -44,3 +44,7 @@
   --color-secondary-850: #1b4a64;
   --color-secondary-900: #173e54;
 }
+
+.cell {
+  @apply px-3 py-2;
+}
