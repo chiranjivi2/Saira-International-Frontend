@@ -11,7 +11,8 @@ import PageNotFound from "./pages/PageNotFound";
 import OurServices from "./pages/OurServices";
 import VisaInfo from "./pages/VisaInfo";
 import UploadDocuments from "./pages/UploadDocuments";
-import StudentForm from "./features/upload documents/StudentForm";
+import StudentForm from "./pages/StudentForm";
+import PartnerForm from "./pages/PartnerForm";
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
           <Route path="visainfo" element={<VisaInfo />} />
           <Route path="universities" element={<Universities />} />
           <Route path="uploaddocuments" element={<UploadDocuments />} />
+          <Route path="uploaddocuments/studentform" element={<StudentForm />} />
+          <Route path="uploaddocuments/partnerform" element={<PartnerForm />} />
           <Route path="news" element={<News />} />
           <Route path="contactus" element={<ContactUs />} />
-          <Route path="/studentform" element={<StudentForm />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
