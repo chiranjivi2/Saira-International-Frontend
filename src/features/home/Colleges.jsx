@@ -1,6 +1,10 @@
 function Colleges() {
   const universities = [
-    { name: "University of Malta", src: "L_Universita_ta_Malta.png" },
+    {
+      name: "University of Malta",
+      src: "L_Universita_ta_Malta.png",
+      website: "https://www.um.edu.mt/",
+    },
     { name: "MCAST", src: "MCAST.png" },
     { name: "Riga Technical University", src: "Riga_Technical_University.png" },
     { name: "Liepaja University", src: "Liepaja_University.png" },
@@ -20,6 +24,7 @@ function Colleges() {
     {
       name: "Berlin School of Business",
       src: "Berlin_School_of_Business_and_Innovation2.png",
+      website: "https://www.berlinsbi.com",
     },
   ];
 
@@ -35,12 +40,14 @@ function Colleges() {
               key={index}
               className="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:cursor-pointer flex items-center justify-center min-h-[140px]"
             >
-              <img
-                className="h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                src={university.src}
-                alt={university.name}
-                loading="lazy"
-              />
+              <a href={university.website} target="_blank">
+                <img
+                  className="h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                  src={university.src}
+                  alt={university.name}
+                  loading="lazy"
+                />
+              </a>
             </div>
           ))}
         </div>

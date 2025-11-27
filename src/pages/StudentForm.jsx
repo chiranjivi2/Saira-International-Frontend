@@ -28,7 +28,7 @@ function StudentForm() {
               className="p-1 md:p-4 md:px-8 max-w-5xl"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div className="grid sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label htmlFor="name" className="text-lg font-semibold">
                   Name
                 </label>
@@ -44,7 +44,7 @@ function StudentForm() {
                 )}
               </div>
 
-              <div className="grid   sm:grid-cols-[10rem_20rem]  md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid   sm:grid-cols-[10rem_20rem]  md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label htmlFor="email" className="text-lg font-semibold">
                   Email
                 </label>
@@ -65,7 +65,7 @@ function StudentForm() {
                   <p className="text-red-500">{errors.email.message}</p>
                 )}
               </div>
-              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label
                   htmlFor="contactNumber"
                   className="text-lg font-semibold"
@@ -85,7 +85,7 @@ function StudentForm() {
                   <p className="text-red-500">{errors.contactNumber.message}</p>
                 )}
               </div>
-              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label htmlFor="dob" className="text-lg font-semibold">
                   Date of Birth
                 </label>
@@ -100,7 +100,7 @@ function StudentForm() {
                   <p className="text-red-500">{errors.dob.message}</p>
                 )}
               </div>
-              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-300 py-6 items-center">
                 <label htmlFor="nationality" className="text-lg font-semibold">
                   Nationality
                 </label>
@@ -117,7 +117,7 @@ function StudentForm() {
                   <p className="text-red-500">{errors.nationality.message}</p>
                 )}
               </div>
-              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-300 py-6 items-center">
                 <label
                   htmlFor="destinationCountry"
                   className="text-lg font-semibold"
@@ -141,7 +141,7 @@ function StudentForm() {
               </div>
 
               {/* IELTS/PTE/TOEFL */}
-              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-4 sm:gap-6 sm:justify-center border-b border-slate-400 py-6 items-center">
+              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-4 sm:gap-6 sm:justify-center border-b border-slate-300 py-6 items-center">
                 <label className="text-lg font-semibold">IELTS/PTE/TOEFL</label>
                 <div className="space-x-6">
                   <div className=" inline-block ">

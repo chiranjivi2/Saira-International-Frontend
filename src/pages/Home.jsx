@@ -13,7 +13,7 @@ function Home() {
       <section>
         <div className="h-[calc(100vh-80px)] bg-[var(--color-primary)]">
           <img
-            src="Saira_hero_image.jpeg"
+            src="heroImage.jpg"
             alt="Saira_hero_img"
             className="h-full w-full object-cover "
           />
@@ -23,6 +23,7 @@ function Home() {
       <Countries />
 
       <HotNewsMarquee />
+
       <Colleges />
       <Card />
       <Footer />

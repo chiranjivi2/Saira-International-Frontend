@@ -4,10 +4,13 @@ import Footer from "../ui/Footer";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
     subject: "",
-    message: "",
+    query: "",
+    phoneNo: "",
+    qualification: "",
+    interestedIn: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -20,6 +23,7 @@ function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
@@ -134,8 +138,8 @@ function ContactUs() {
                     </label>
                     <input
                       type="text"
-                      name="name"
-                      value={formData.name}
+                      name="fullName"
+                      value={formData.fullName}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                       placeholder="John Doe"
@@ -158,6 +162,87 @@ function ContactUs() {
 
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="text"
+                      name="phoneNo"
+                      value={formData.phoneNo}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
+                      placeholder="9768827784"
+                    />
+                  </div>
+
+                  {/* qualification */}
+                  <div>
+                    <label className="block text-grey-700 font-medium mb-2">
+                      Qualification
+                    </label>
+                    <select
+                      name="qualification"
+                      value={formData.qualification}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="Pursing 12th">Pursuing 12th</option>
+                      <option value="Completed 12th">Completed 12th</option>
+                      <option value="Diploma Pursuing">Diploma Pursuing</option>
+                      <option value="Diploma Completed">
+                        Diploma Completed
+                      </option>
+                      <option value="Bachelor/UG-Pursuing">
+                        Bachelor/UG-Pursuing
+                      </option>
+                      <option value="Bachelor/UG-Completed">
+                        Bachelor/UG-Completed
+                      </option>
+                      <option value="Master/PG-Pursuing">
+                        Master/PG-Pursuing
+                      </option>
+                      <option value="Master/PG-Completed">
+                        Master/PG-Completed
+                      </option>
+                      <option value="Doctorate/PG-Pursuing">
+                        Doctorate/PG-Pursuing
+                      </option>
+                    </select>
+                  </div>
+
+                  {/* Interested in */}
+                  <div>
+                    <label className="block text-grey-700 font-medium mb-2">
+                      Program Interested
+                    </label>
+                    <select
+                      name="interestedIn"
+                      value={formData.interestedIn}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="Masters">Masters</option>
+                      <option value="Bachelors">Bachelors</option>
+                      <option value="Doctorals/PHD">Doctorals/PHD</option>
+                      <option value="Diploma and Certificate Courses">
+                        Diploma and Certificate Courses
+                      </option>
+                      <option value="PG Diploma/ Certification">
+                        PG Diploma/ Certification
+                      </option>
+                      <option value="Professional Courses">
+                        Professional Courses
+                      </option>
+                      <option value="Technical Courses">
+                        Technical Courses
+                      </option>
+                      <option value="Vocational Courses">
+                        VocationalCourses
+                      </option>
+                    </select>
+                  </div>
+
+                  {/* <div>
+                    <label className="block text-gray-700 font-medium mb-2">
                       Subject
                     </label>
                     <input
@@ -168,15 +253,15 @@ function ContactUs() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                       placeholder="How can we help?"
                     />
-                  </div>
+                  </div> */}
 
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
                       Message
                     </label>
                     <textarea
-                      name="message"
-                      value={formData.message}
+                      name="query"
+                      value={formData.query}
                       onChange={handleChange}
                       rows="5"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 resize-none"

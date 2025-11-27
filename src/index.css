@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"); */
+.cell {
+  @apply px-3 py-2;
+}
 
 :root {
   --color-grey-0: #fff;
@@ -44,7 +46,6 @@
   --color-secondary-850: #1b4a64;
   --color-secondary-900: #173e54;
 }
-
-.cell {
-  @apply px-3 py-2;
-}
+/* body {
+  font-family: "Nunito", sans-serif;
+} */

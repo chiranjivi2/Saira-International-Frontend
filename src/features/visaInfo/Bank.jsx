@@ -67,16 +67,16 @@ function Bank() {
           Show Bank Funds for Study Visa
         </h3>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center gap-y-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3  justify-items-center gap-6 md:gap-12">
           {/* study in Malta */}
 
           {countries.map((country) => {
             return (
               <div
                 key={country.name}
-                className="flex flex-col  rounded-2xl overflow-hidden  lg:w-80 sm:w-90  shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                className="flex flex-col  rounded-2xl overflow-hidden w-80 xl:w-85  lg:w-75 sm:w-80  shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
               >
-                <div className="w-auto h-50 ">
+                <div className="w-sm sm:w-2xl h-50 ">
                   <img
                     className="h-full w-full object-cover"
                     src={`visainfo/${country.name}.jpg`}

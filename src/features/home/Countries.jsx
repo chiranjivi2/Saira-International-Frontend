@@ -40,8 +40,7 @@ function Countries() {
                 key={i}
               >
                 {" "}
-                <img className="h-10 w-15" src={country.src} />{" "}
-                <p>{country.name}</p>
+                <img className="w-10" src={country.src} /> <p>{country.name}</p>
               </div>
             );
           })}

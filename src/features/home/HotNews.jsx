@@ -27,9 +27,9 @@ export default function HotNewsMarquee() {
             {newsItems.map((news, index) => (
               <div
                 key={index}
-                className="mx-8 inline-block bg-white rounded-lg px-6 py-2 shadow-lg"
+                className="mx-8 inline-block  rounded-lg px-6 py-2 shadow-lg"
               >
-                <span className="text-gray-800 font-semibold text-lg">
+                <span className="text-[var(--color-primary-50)] font-semibold text-lg">
                   {news}
                 </span>
               </div>
@@ -40,9 +40,9 @@ export default function HotNewsMarquee() {
             {newsItems.map((news, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="mx-8 inline-block bg-white rounded-lg px-6 py-2 shadow-lg"
+                className="mx-8 inline-block  rounded-lg px-6 py-2 shadow-lg"
               >
-                <span className="text-gray-800 font-semibold text-lg">
+                <span className="text-[var(--color-primary-50)] font-semibold text-lg">
                   {news}
                 </span>
               </div>
