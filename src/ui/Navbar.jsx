@@ -9,7 +9,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center h-[80px] px-4 sm:px-8 md:px-12 bg-slate-100 sticky top-0 z-100">
+    <nav className="flex justify-between items-center h-[80px] px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100">
       <div className="h-full">
         <img src="Saira_logo.png" className="h-full py-1" />
       </div>
@@ -67,7 +67,7 @@ function Navbar() {
             }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
               ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
           >
-            Universities/colleges
+            Universities
           </NavLink>
         </li>
         <li>
