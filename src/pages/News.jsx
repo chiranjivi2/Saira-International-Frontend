@@ -41,12 +41,13 @@ function News() {
                   key={n}
                   className="flex gap-15 shadow-2xl rounded-2xl overflow-hidden mb-12 bg-slate-100"
                 >
-                  <div className="w-110 h-75 shrink-0 rounded-2xl overflow-hidden ">
+                  <div className="w-110 h-75 shrink-0 rounded-2xl overflow-hidden relative group ">
                     <img
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 "
                       src={n.image}
                       alt="news1"
                     />
+                    <div className="absolute inset-0  bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   <div className="p-2 py-5 flex flex-col gap-2 ">
                     <a
