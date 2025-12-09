@@ -9,6 +9,8 @@ import Welcome from "../features/home/Welcome";
 import Footer from "../ui/Footer";
 import Hero from "../features/home/Hero";
 
+import FAQ from "../ui/Faq";
+
 function Home() {
   return (
     <div>
@@ -30,6 +32,8 @@ function Home() {
 
       <Colleges />
       <Card />
+
+      <FAQ />
       <Footer />
     </div>
   );

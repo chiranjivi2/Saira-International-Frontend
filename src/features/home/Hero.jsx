@@ -40,9 +40,12 @@ function Hero() {
                 Study and Work Abroad
               </h1>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center z-10">
-                {destinations.map((destination) => {
+                {destinations.map((destination, index) => {
                   return (
-                    <div className="flex flex-col gap-4 items-center transform group hover:-translate-y-1 transition-transform duration-500">
+                    <div
+                      key={index}
+                      className="flex flex-col gap-4 items-center transform group hover:-translate-y-1 transition-transform duration-500"
+                    >
                       <div className="h-55 w-full rounded-2xl overflow-hidden  border-2 border-white">
                         <img
                           className="h-full w-full object-cover group-hover:scale-110 transition-all duration-500"
