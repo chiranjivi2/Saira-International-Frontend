@@ -1,17 +1,60 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState, useCallback } from "react";
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function HotNewsMarquee() {
-  const newsItems = [
-    "Stydy in Europe",
-    "IELTS Not Required",
-    "Tution fee 2500 euro to 6000 euro* Rs/year in Public University Latvia",
-    "Can apply Erasmus scholarship",
-    "On Campus Accommodation",
-    "Nice Culture and Lifestyle*",
-    "20 hrs part time work allowed",
-    "Call/Whatsapp : 9768827875",
-    "Email: sairainternational@gmail.com",
-  ];
+  // const newsItems = [
+  //   "Stydy in Europe",
+  //   "IELTS Not Required",
+  //   "Tution fee 2500 euro to 6000 euro* Rs/year in Public University Latvia",
+  //   "Can apply Erasmus scholarship",
+  //   "On Campus Accommodation",
+  //   "Nice Culture and Lifestyle*",
+  //   "20 hrs part time work allowed",
+  //   "Call/Whatsapp : 9768827875",
+  //   "Email: sairainternational@gmail.com",
+  // ];
+
+  const [newsItems, setNewsItems] = useState([]);
+
+  function splitIntoSentences(paragraph) {
+    if (!paragraph || typeof paragraph !== "string") return [];
+
+    return paragraph
+      .split(/(?<=[.?!])\s+/) // split when . ? ! is followed by space
+      .map((sentence) => sentence.trim())
+      .filter((sentence) => sentence.length > 0);
+  }
+
+  // const getHotNews = async () => {
+  //   const response = await axios.get(`${BASE_URL}/hotnews/get`, {
+  //     withCredentials: true,
+  //   });
+  //   setNewsItems(splitIntoSentences(response.data.data.content));
+  //   console.log(newsItems);
+  // };
+
+  // Fetch Hot News from backend
+  const getHotNews = useCallback(async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/hotnews/get`, {
+        withCredentials: true,
+      });
+
+      const content = response?.data?.data?.content || "";
+      const sentences = splitIntoSentences(content);
+
+      setNewsItems(sentences);
+      console.log("Fetched News:", sentences);
+    } catch (error) {
+      console.error("Error fetching Hot News:", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    getHotNews();
+  }, [getHotNews]);
 
   return (
     <div className="w-full bg-gradient-to-r from-[var(--color-secondary-500)] to-[var(--color-primary-500)] py-4 overflow-hidden">
