@@ -71,7 +71,7 @@ export default function Card() {
 function PamphletCard({ image }) {
   return (
     <div className="w-96 shrink-0  group">
-      <div className="relative h-50 overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+      <div className="relative h-55 overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
         <img
           src={image}
           alt="pamphlet"

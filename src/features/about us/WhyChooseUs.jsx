@@ -11,10 +11,10 @@ function WhyChooseUs() {
 
         {/* abroad education consultant  */}
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-14 justify-items-center items-center mx-auto mb-30">
-          <div className="sm:w-3/4  rounded-2xl overflow-hidden">
+          <div className="sm:w-3/4 h-60 rounded-2xl overflow-hidden">
             <img
-              className="transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
-              src="aboutus/abroad_education_consultant.jpg"
+              className="w-full h-full object-cover transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
+              src="aboutus/abroad_education.jpg"
             />
           </div>
           <div className="">
@@ -53,7 +53,7 @@ function WhyChooseUs() {
           <div className="sm:w-3/4 row-1 lg:col-2  rounded-2xl overflow-hidden">
             <img
               className="transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
-              src="aboutus/abroad_education_consultant.jpg"
+              src="aboutus/job_search_services.jpg"
             />
           </div>
         </div>
@@ -63,7 +63,7 @@ function WhyChooseUs() {
           <div className="sm:w-3/4 rounded-2xl overflow-hidden">
             <img
               className="transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
-              src="aboutus/abroad_education_consultant.jpg"
+              src="aboutus/resume_writing_services.jpg"
             />
           </div>
           <div className="">
@@ -98,7 +98,7 @@ function WhyChooseUs() {
           <div className="sm:w-3/4 row-1 lg:col-2 rounded-2xl overflow-hidden">
             <img
               className="transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
-              src="aboutus/abroad_education_consultant.jpg"
+              src="aboutus/migrate.jpg"
             />
           </div>
         </div>
@@ -108,7 +108,7 @@ function WhyChooseUs() {
           <div className="sm:w-3/4 rounded-2xl overflow-hidden">
             <img
               className="transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
-              src="aboutus/abroad_education_consultant.jpg"
+              src="aboutus/social_media.jpg"
             />
           </div>
           <div className="">
@@ -137,7 +137,7 @@ function WhyChooseUs() {
           <div className="sm:w-3/4 row-1 lg:col-2 rounded-2xl overflow-hidden">
             <img
               className="transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
-              src="aboutus/abroad_education_consultant.jpg"
+              src="aboutus/experienced_professionals.jpg"
             />
           </div>
         </div>

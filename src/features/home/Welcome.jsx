@@ -5,10 +5,13 @@ function Welcome() {
   return (
     <section className="py-14 bg-[var(--color-secondary-0)]">
       <div className="max-w-[1200px] mx-auto px-8 text-center">
-        <span className="block mb-4 font-medium text-3xl">Welcome to</span>
-        <h2 className="font-bold text-4xl mb-10">
+        <span className="block mb-4 font-medium text-3xl italic">
+          Welcome to
+        </span>
+        <h2 className="font-bold text-4xl mb-2">
           Saira International Education and Consultancy
         </h2>
+        <p className="text-2xl mb-10">Your gateway to global oppurtunities.</p>
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 items-center p-6">
           <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
             <img
