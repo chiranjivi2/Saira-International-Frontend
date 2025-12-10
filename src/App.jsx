@@ -13,6 +13,7 @@ import VisaInfo from "./pages/VisaInfo";
 import UploadDocuments from "./pages/UploadDocuments";
 import StudentForm from "./pages/StudentForm";
 import PartnerForm from "./pages/PartnerForm";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="uploaddocuments/partnerform" element={<PartnerForm />} />
           <Route path="news" element={<News />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="privacypolicy" element={<PrivacyPolicy />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

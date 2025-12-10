@@ -1,7 +1,9 @@
 import { FaFacebook, FaTiktok } from "react-icons/fa6";
 import { FaInstagram, FaRegCopyright, FaWhatsapp } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <section className="pt-16 pb-5 bg-[var(--color-primary-500)] text-[var(--color-primary-50)]">
       <div className="max-w-[1200px] px-4 sm:px-8 mx-auto">
@@ -201,7 +203,12 @@ function Footer() {
         <hr className="border-t border-[var(--color-primary-300)] mb-6" />
 
         <div className="flex gap-5 justify-center md:justify-end text-sm">
-          <p>Privacy Policy</p>
+          <p
+            onClick={() => navigate("/privacypolicy")}
+            className="cursor-pointer hover:underline"
+          >
+            Privacy Policy
+          </p>
           <p>Terms and Conditions</p>
           <p>Disclaimer</p>
         </div>
