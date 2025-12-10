@@ -46,7 +46,7 @@ export default function HotNewsMarquee() {
       const sentences = splitIntoSentences(content);
 
       setNewsItems(sentences);
-      console.log("Fetched News:", sentences);
+      // console.log("Fetched News:", sentences);
     } catch (error) {
       console.error("Error fetching Hot News:", error);
     }

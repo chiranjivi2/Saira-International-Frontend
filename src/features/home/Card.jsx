@@ -1,4 +1,30 @@
-function Card() {
+import axios from "axios";
+import React, { useEffect, useState, useCallback } from "react";
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+export default function Card() {
+  const [pamphlets, setPamphlets] = useState([]);
+
+  // Fetch Pamphlets
+  const getPamphlets = useCallback(async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/template/get`, {
+        withCredentials: true,
+      });
+
+      const data = response?.data?.data || [];
+      setPamphlets(data);
+      console.log("Pamphlets fetched:", data);
+    } catch (error) {
+      console.error("Error fetching Pamphlets:", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    getPamphlets();
+  }, [getPamphlets]);
+
   return (
     <section className="py-14 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -6,93 +32,33 @@ function Card() {
           Featured Collection
         </h2>
 
-        <div className="relative">
-          {/* Animated scrolling container */}
-          <div className="flex gap-6 animate-scroll">
-            <div className="shrink-0 w-96  group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <img
-                  src="cards/card1.jpg"
-                  alt="Card 1"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
+        <div className="relative w-full overflow-hidden">
+          {/* SCROLLING WRAPPER */}
+          <div className="flex gap-6 animate-scroll whitespace-nowrap">
+            {/* MAIN SET */}
+            {pamphlets.map((item) => (
+              <PamphletCard key={item._id} image={item.imageURL} />
+            ))}
 
-            <div className="shrink-0 w-96 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <img
-                  src="cards/card2.jpg"
-                  alt="Card 2"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
-
-            <div className="shrink-0 w-96 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <img
-                  src="cards/card3.jpg"
-                  alt="Card 3"
-                  className="w-full  object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
-
-            <div className="shrink-0 w-96 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <img
-                  src="cards/card4.jpg"
-                  alt="Card 4"
-                  className="w-full  object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
-
-            {/* Duplicate cards for seamless loop */}
-            <div className="shrink-0 w-96 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <img
-                  src="cards/card1.jpg"
-                  alt="Card 1"
-                  className="w-full  object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
-
-            <div className="shrink-0 w-96 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <img
-                  src="cards/card2.jpg"
-                  alt="Card 2"
-                  className="w-full  object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </div>
+            {/* DUPLICATE SET — REQUIRED FOR SEAMLESS LOOP */}
+            {pamphlets.map((item) => (
+              <PamphletCard key={`dup-${item._id}`} image={item.imageURL} />
+            ))}
           </div>
         </div>
       </div>
 
+      {/* Animation */}
       <style>{`
         @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        
+
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 25s linear infinite;
         }
-        
+
         .animate-scroll:hover {
           animation-play-state: paused;
         }
@@ -101,4 +67,18 @@ function Card() {
   );
 }
 
-export default Card;
+// 🎨 Reusable card component
+function PamphletCard({ image }) {
+  return (
+    <div className="w-96 shrink-0  group">
+      <div className="relative h-50 overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+        <img
+          src={image}
+          alt="pamphlet"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
+    </div>
+  );
+}
