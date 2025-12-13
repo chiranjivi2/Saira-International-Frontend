@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { getFaq } from "../services/api";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
   const navigate = useNavigate();
+  const [faqs, setFaqs] = useState([]);
 
-  const faqs = [
+  useEffect(() => {
+    const fetchFaq = async () => {
+      const data = await getFaq();
+      setFaqs(data);
+    };
+    fetchFaq();
+  }, []);
+
+  const faq = [
     {
       question: "Which countries do you provide services for?",
       answer:
@@ -87,7 +97,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-2xl transition-all"
               >
-                <span className="text-lg font-semibold text-gray-900 pr-8">
+                <span className="text-lg font-semibold text-gray-900 pr-8 ">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -104,8 +114,8 @@ export default function FAQ() {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-6 pb-5 pt-0">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-6 py-5">
+                  <p className="text-gray-600 leading-relaxed ">{faq.answer}</p>
                 </div>
               </div>
             </div>
