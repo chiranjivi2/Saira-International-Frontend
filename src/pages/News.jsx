@@ -1,22 +1,32 @@
+import { useEffect, useState } from "react";
+import { getNews } from "../services/api";
 import Footer from "../ui/Footer";
 
 function News() {
-  const news = [
-    {
-      image: "news/news1.jpg",
-      website: "timesofmalta.com",
-      title: "Who are the foreign nationals living in Malta?",
-      description: "There are now over 115,000 non-Maltese nationals in Malta",
-    },
-    {
-      image: "news/news2.jpg",
-      website: "timesofmalta.com",
-      title:
-        "European Commission expects Malta's economy to grow more than first thought",
-      description:
-        "Commission's autumn 2024 forecast revises GDP growth projection up to 5%",
-    },
-  ];
+  // const news = [
+  //   {
+  //     imageURL: "news/news1.jpg",
+  //     website: "timesofmalta.com",
+  //     title: "Who are the foreign nationals living in Malta?",
+  //     description: "There are now over 115,000 non-Maltese nationals in Malta",
+  //   },
+  //   {
+  //     imageURL: "news/news2.jpg",
+  //     website: "timesofmalta.com",
+  //     title:
+  //       "European Commission expects Malta's economy to grow more than first thought",
+  //     description:
+  //       "Commission's autumn 2024 forecast revises GDP growth projection up to 5%",
+  //   },
+  // ];
+  const [news, setNews] = useState([]);
+  useEffect(() => {
+    const fetchNews = async () => {
+      const data = await getNews();
+      if (data) setNews(data);
+    };
+    fetchNews();
+  }, []);
   return (
     <div>
       <section className="bg-gradient-to-r from-[var(--color-primary-500)] to-[var(--color-secondary-500)] text-white py-20">
@@ -35,16 +45,16 @@ function News() {
       <section className="py-14 bg-[var(--color-secondary-50)]">
         <div className="max-w-6xl px-8 mx-auto">
           <div>
-            {news.map((n) => {
+            {news.map((n, index) => {
               return (
                 <div
-                  key={n}
+                  key={index}
                   className="flex gap-15 shadow-2xl rounded-2xl overflow-hidden mb-12 bg-slate-100"
                 >
                   <div className="w-110 h-75 shrink-0 rounded-2xl overflow-hidden relative group ">
                     <img
                       className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 "
-                      src={n.image}
+                      src={n.imageURL}
                       alt="news1"
                     />
                     <div className="absolute inset-0  bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
