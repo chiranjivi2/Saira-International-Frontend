@@ -14,6 +14,7 @@ import UploadDocuments from "./pages/UploadDocuments";
 import StudentForm from "./pages/StudentForm";
 import PartnerForm from "./pages/PartnerForm";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="news" element={<News />} />
           <Route path="contactus" element={<ContactUs />} />
           <Route path="privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="termsandconditions" element={<TermsAndConditions />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

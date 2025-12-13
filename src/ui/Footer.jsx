@@ -209,7 +209,12 @@ function Footer() {
           >
             Privacy Policy
           </p>
-          <p>Terms and Conditions</p>
+          <p
+            onClick={() => navigate("/termsandconditions")}
+            className="cursor-pointer hover:underline"
+          >
+            Terms and Conditions
+          </p>
           <p>Disclaimer</p>
         </div>
       </div>
