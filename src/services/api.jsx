@@ -20,6 +20,18 @@ export const getFaq = async () => {
     const faq = response?.data.data;
     return faq;
   } catch (error) {
-    console.error("Error fetching news:", error);
+    console.error("Error fetching Faqs:", error);
+  }
+};
+
+export const postStudentData = async (studentData) => {
+  try {
+    const response = await axios.post(
+      `${BASE_URL}/studentdocument/create`,
+      studentData
+    );
+    console.log(response);
+  } catch (error) {
+    console.error("Error sending student data:", error);
   }
 };

@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import Footer from "../ui/Footer";
+import { postStudentData } from "../services/api";
 
 function StudentForm() {
   const { register, handleSubmit, formState } = useForm();
@@ -9,6 +10,7 @@ function StudentForm() {
 
   function onSubmit(data) {
     console.log(data);
+    postStudentData(data);
   }
 
   const regxEmail = /\S+@\S+\.\S+/;
@@ -25,7 +27,7 @@ function StudentForm() {
           </div>
           <div>
             <form
-              className="p-1 md:p-4 md:px-8 max-w-5xl"
+              className="p-1 md:p-4 md:px-16 max-w-5xl"
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="grid sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
@@ -119,23 +121,23 @@ function StudentForm() {
               </div>
               <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label
-                  htmlFor="destinationCountry"
+                  htmlFor="applyingForCountry"
                   className="text-lg font-semibold"
                 >
                   Applying for Country
                 </label>
                 <input
                   type="text"
-                  name="destinationCountry"
-                  id="destinationCountry"
+                  name="applyingForCountry"
+                  id="applyingForCountry"
                   className="text-lg border border-slate-400 rounded-md px-2 py-1 focus:-outline-offset-1 focus:outline-blue-600"
-                  {...register("destinationCountry", {
+                  {...register("applyingForCountry", {
                     required: "This field is required.",
                   })}
                 />
-                {errors?.destinationCountry && (
+                {errors?.applyingForCountry && (
                   <p className="text-red-500">
-                    {errors.destinationCountry.message}
+                    {errors.applyingForCountry.message}
                   </p>
                 )}
               </div>
@@ -148,10 +150,10 @@ function StudentForm() {
                     <input
                       type="radio"
                       id="yes"
-                      name="exam"
+                      name="IELTS_PTE_TOEFL"
                       value="yes"
                       className="h-4 w-4 hover:cursor-pointer"
-                      {...register("exam", {
+                      {...register("IELTS_PTE_TOEFL", {
                         required: "This field is required.",
                       })}
                     />{" "}
@@ -161,18 +163,20 @@ function StudentForm() {
                     <input
                       type="radio"
                       id="no"
-                      name="exam"
+                      name="IELTS_PTE_TOEFL"
                       value="no"
                       className="h-4 w-4 hover:cursor-pointer"
-                      {...register("exam", {
+                      {...register("IELTS_PTE_TOEFL", {
                         required: "This field is required.",
                       })}
                     />{" "}
                     <label htmlFor="no">No</label>
                   </div>
                 </div>
-                {errors?.exam && (
-                  <p className="text-red-500">{errors.exam.message}</p>
+                {errors?.IELTS_PTE_TOEFL && (
+                  <p className="text-red-500">
+                    {errors.IELTS_PTE_TOEFL.message}
+                  </p>
                 )}
               </div>
 

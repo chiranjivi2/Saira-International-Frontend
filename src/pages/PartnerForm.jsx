@@ -25,7 +25,7 @@ function PartnerForm() {
           </div>
           <div>
             <form
-              className="p-1 md:p-4 md:px-8 max-w-5xl"
+              className="p-1 md:p-4 md:px-16 max-w-5xl"
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="grid sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
