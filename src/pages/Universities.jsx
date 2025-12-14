@@ -1,5 +1,4 @@
 import CollegesList from "../features/universities/CollegesList";
-import Footer from "../ui//Footer";
 
 function Universities() {
   return (
@@ -13,8 +12,6 @@ function Universities() {
       </section>
 
       <CollegesList />
-
-      <Footer />
     </>
   );
 }

@@ -2,8 +2,6 @@ import Mission from "../features/about us/Mission";
 import WhatWeDo from "../features/about us/WhatWeDo";
 import WhyChooseUs from "../features/about us/WhyChooseUs";
 
-import Footer from "../ui/Footer";
-
 function AboutUs() {
   return (
     <>
@@ -53,8 +51,6 @@ function AboutUs() {
       <WhatWeDo />
 
       <WhyChooseUs />
-
-      <Footer />
     </>
   );
 }

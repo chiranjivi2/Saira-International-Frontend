@@ -1,7 +1,6 @@
 import Help from "../features/our services/Help";
 import Jobs from "../features/our services/Jobs";
 import StudyAbroad from "../features/our services/StudyAbroad";
-import Footer from "../ui/Footer";
 
 function OurServices() {
   return (
@@ -21,8 +20,6 @@ function OurServices() {
       <hr className="text-[var(--color-primary-100)] max-w-6xl mx-auto h-1" />
 
       <Jobs />
-
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getNews } from "../services/api";
-import Footer from "../ui/Footer";
 
 function News() {
   // const news = [
@@ -82,7 +81,6 @@ function News() {
           </div>
         </div>
       </section>
-      <Footer />
 
       <style>
         {`

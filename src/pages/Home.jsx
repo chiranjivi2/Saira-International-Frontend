@@ -6,7 +6,7 @@ import HotNewsMarquee from "../features/home/HotNews";
 
 import Universities from "../features/home/Universities";
 import Welcome from "../features/home/Welcome";
-import Footer from "../ui/Footer";
+
 import Hero from "../features/home/Hero";
 
 import FAQ from "../ui/Faq";
@@ -34,7 +34,6 @@ function Home() {
       <Card />
 
       <FAQ />
-      <Footer />
     </div>
   );
 }

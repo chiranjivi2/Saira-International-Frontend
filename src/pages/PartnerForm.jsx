@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import Footer from "../ui/Footer";
 
 function PartnerForm() {
   const { register, handleSubmit, formState } = useForm();
@@ -281,7 +280,6 @@ function PartnerForm() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

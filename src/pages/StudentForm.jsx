@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import Footer from "../ui/Footer";
+
 import { postStudentData } from "../services/api";
 
 function StudentForm() {
@@ -218,7 +218,6 @@ function StudentForm() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

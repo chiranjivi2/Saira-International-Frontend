@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from "lucide-react";
-import Footer from "../ui/Footer";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -329,8 +328,6 @@ function ContactUs() {
         }
       `}</style>
       </div>
-
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Footer from "../ui/Footer";
 
 function UploadDocuments() {
   const navigate = useNavigate();
@@ -57,8 +56,6 @@ function UploadDocuments() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }
