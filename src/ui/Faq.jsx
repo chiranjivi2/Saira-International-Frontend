@@ -123,7 +123,7 @@ export default function FAQ() {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-12 text-center p-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl shadow-lg">
+        <div className="mt-12 text-center p-8 bg-gradient-to-r from-(--color-secondary-500) to-(--color-primary-500) rounded-2xl shadow-lg">
           <h3 className="text-2xl font-bold text-white mb-2">
             Ready to start your journey?
           </h3>

@@ -1,5 +1,5 @@
-import axios from "axios";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
+import { getHotNews } from "../../services/api";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -35,26 +35,14 @@ export default function HotNewsMarquee() {
   //   console.log(newsItems);
   // };
 
-  // Fetch Hot News from backend
-  const getHotNews = useCallback(async () => {
-    try {
-      const response = await axios.get(`${BASE_URL}/hotnews/get`, {
-        withCredentials: true,
-      });
-
-      const content = response?.data?.data?.content || "";
-      const sentences = splitIntoSentences(content);
-
-      setNewsItems(sentences);
-      // console.log("Fetched News:", sentences);
-    } catch (error) {
-      console.error("Error fetching Hot News:", error);
-    }
-  }, []);
-
   useEffect(() => {
-    getHotNews();
-  }, [getHotNews]);
+    const fetchHotNews = async () => {
+      const content = await getHotNews();
+      const sentences = splitIntoSentences(content);
+      setNewsItems(sentences);
+    };
+    fetchHotNews();
+  }, []);
 
   return (
     <div className="w-full bg-gradient-to-r from-[var(--color-secondary-500)] to-[var(--color-primary-500)] py-4 overflow-hidden">

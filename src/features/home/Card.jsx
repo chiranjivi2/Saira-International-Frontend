@@ -1,29 +1,18 @@
-import axios from "axios";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
+import { getPamphlets } from "../../services/api";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function Card() {
   const [pamphlets, setPamphlets] = useState([]);
 
-  // Fetch Pamphlets
-  const getPamphlets = useCallback(async () => {
-    try {
-      const response = await axios.get(`${BASE_URL}/template/get`, {
-        withCredentials: true,
-      });
-
-      const data = response?.data?.data || [];
-      setPamphlets(data);
-      console.log("Pamphlets fetched:", data);
-    } catch (error) {
-      console.error("Error fetching Pamphlets:", error);
-    }
-  }, []);
-
   useEffect(() => {
-    getPamphlets();
-  }, [getPamphlets]);
+    const fetchPamphlets = async () => {
+      const data = await getPamphlets();
+      if (data) setPamphlets(data);
+    };
+    fetchPamphlets();
+  }, []);
 
   return (
     <section className="py-14 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
