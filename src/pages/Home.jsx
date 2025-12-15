@@ -1,5 +1,5 @@
 import Card from "../features/home/Card";
-import Colleges from "../features/home/Colleges";
+
 import Countries from "../features/home/Countries";
 import StudyAbroadHero from "../features/home/StudyAbroadHero";
 import HotNewsMarquee from "../features/home/HotNews";
@@ -30,7 +30,7 @@ function Home() {
 
       <HotNewsMarquee />
 
-      <Colleges />
+      <Universities />
       <Card />
 
       <FAQ />
