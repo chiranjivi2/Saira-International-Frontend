@@ -78,10 +78,17 @@ export const postStudentData = async (studentData) => {
   try {
     const response = await axios.post(
       `${BASE_URL}/studentdocument/create`,
-      studentData
+      studentData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
     );
     console.log(response);
+    return response.data;
   } catch (error) {
     console.error("Error sending student data:", error);
+    throw error;
   }
 };

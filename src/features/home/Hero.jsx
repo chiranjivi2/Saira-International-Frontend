@@ -19,7 +19,7 @@ function Hero() {
   ];
 
   return (
-    <section className="py-12 bg-[var(--color-secondary-500)]">
+    <section className="py-12 bg-(--color-secondary-500)">
       <div className="max-w-7xl px-8 mx-auto">
         <div className="grid lg:grid-cols-[30rem_1fr] justify-center justify-items-center items-center ">
           <div className="hidden h-80 lg:block sm:h-120 mx-auto">
@@ -36,7 +36,7 @@ function Hero() {
           {/* text */}
           <div className="relative">
             <div className=" flex flex-col gap-12 justify-center z-100">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white font-bold text-center mt-10 z-10">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white  text-center mt-10 z-10 font-(--font-inter)">
                 Study and Work Abroad
               </h1>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center z-10">
