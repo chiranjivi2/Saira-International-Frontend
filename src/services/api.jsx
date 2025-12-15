@@ -92,3 +92,21 @@ export const postStudentData = async (studentData) => {
     throw error;
   }
 };
+export const postContactUsData = async (contactUsData) => {
+  try {
+    const response = await axios.post(
+      `${BASE_URL}/inquiry/create`,
+      contactUsData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error("Error sending inquiry data:", error);
+    throw error;
+  }
+};

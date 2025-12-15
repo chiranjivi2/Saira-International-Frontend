@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Welcome() {
   const navigate = useNavigate();
   return (
-    <section className="py-14 bg-[var(--color-secondary-0)]">
+    <section className="py-14 bg-(--color-secondary-0)">
       <div className="max-w-[1200px] mx-auto px-8 text-center">
         <span className="block mb-4 font-medium text-3xl italic">
           Welcome to

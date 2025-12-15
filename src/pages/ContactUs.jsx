@@ -1,17 +1,35 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from "lucide-react";
+import { postContactUsData } from "../services/api";
+import { toast } from "react-hot-toast";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    subject: "",
+
     query: "",
     phoneNo: "",
     qualification: "",
-    interestedIn: "",
+    intrestedIn: "",
   });
+
+  const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.fullName) newErrors.fullName = "Full Name is required.";
+    if (!formData.email) newErrors.email = "Email is required.";
+    if (!formData.phoneNo) newErrors.phoneNo = "Phone Number is required.";
+    if (!formData.qualification)
+      newErrors.qualification = "Qualification is required.";
+    if (!formData.query) newErrors.query = "Query is required.";
+    if (!formData.intrestedIn)
+      newErrors.intrestedIn = "Program interested in is required.";
+
+    return newErrors;
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -23,11 +41,32 @@ function ContactUs() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    setErrors({});
+
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
     }, 3000);
+
+    const postData = async () => {
+      try {
+        const result = await postContactUsData(formData);
+
+        toast.success("form data sent successfully.");
+
+        console.log("result:", result);
+      } catch (err) {
+        console.log("Upload failed", err);
+        toast.error("error", err);
+      }
+    };
+    postData();
   };
 
   return (
@@ -143,6 +182,11 @@ function ContactUs() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                       placeholder="John Doe"
                     />
+                    {errors?.fullName && (
+                      <p className="text-red-500 text-md py-2">
+                        {errors.fullName}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -157,6 +201,11 @@ function ContactUs() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                       placeholder="john@example.com"
                     />
+                    {errors?.email && (
+                      <p className="text-red-500 text-md py-2">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -171,6 +220,11 @@ function ContactUs() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                       placeholder="9768827784"
                     />
+                    {errors?.phoneNo && (
+                      <p className="text-red-500 text-md py-2">
+                        {errors.phoneNo}
+                      </p>
+                    )}
                   </div>
 
                   {/* qualification */}
@@ -184,28 +238,19 @@ function ContactUs() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                     >
-                      <option value="Pursing 12th">Pursuing 12th</option>
-                      <option value="Completed 12th">Completed 12th</option>
-                      <option value="Diploma Pursuing">Diploma Pursuing</option>
-                      <option value="Diploma Completed">
-                        Diploma Completed
+                      <option value="" disabled>
+                        Select your qualification
                       </option>
-                      <option value="Bachelor/UG-Pursuing">
-                        Bachelor/UG-Pursuing
-                      </option>
-                      <option value="Bachelor/UG-Completed">
-                        Bachelor/UG-Completed
-                      </option>
-                      <option value="Master/PG-Pursuing">
-                        Master/PG-Pursuing
-                      </option>
-                      <option value="Master/PG-Completed">
-                        Master/PG-Completed
-                      </option>
-                      <option value="Doctorate/PG-Pursuing">
-                        Doctorate/PG-Pursuing
-                      </option>
+                      <option value="10">10</option>
+                      <option value="12">12</option>
+                      <option value="Bachelors">Bachelors</option>
+                      <option value="Masters">Masters</option>
                     </select>
+                    {errors?.qualification && (
+                      <p className="text-red-500 text-md py-2">
+                        {errors.qualification}
+                      </p>
+                    )}
                   </div>
 
                   {/* Interested in */}
@@ -214,14 +259,19 @@ function ContactUs() {
                       Program Interested
                     </label>
                     <select
-                      name="interestedIn"
-                      value={formData.interestedIn}
+                      name="intrestedIn"
+                      value={formData.intrestedIn}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
                     >
-                      <option value="Masters">Masters</option>
+                      <option value="" disabled>
+                        Select your interested program
+                      </option>
+                      <option value="Diploma">Diploma</option>
                       <option value="Bachelors">Bachelors</option>
-                      <option value="Doctorals/PHD">Doctorals/PHD</option>
+                      <option value="Masters">Masters</option>
+                      <option value="Others">Others</option>
+                      {/* <option value="Doctorals/PHD">Doctorals/PHD</option>
                       <option value="Diploma and Certificate Courses">
                         Diploma and Certificate Courses
                       </option>
@@ -236,8 +286,13 @@ function ContactUs() {
                       </option>
                       <option value="Vocational Courses">
                         VocationalCourses
-                      </option>
+                      </option> */}
                     </select>
+                    {errors?.intrestedIn && (
+                      <p className="text-red-500 text-md py-2">
+                        {errors.intrestedIn}
+                      </p>
+                    )}
                   </div>
 
                   {/* <div>
@@ -266,6 +321,11 @@ function ContactUs() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 resize-none"
                       placeholder="Tell us more about your inquiry..."
                     />
+                    {errors?.query && (
+                      <p className="text-red-500 text-md py-2">
+                        {errors.query}
+                      </p>
+                    )}
                   </div>
 
                   <button

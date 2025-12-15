@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import Navbar from "./ui/Navbar";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
@@ -18,25 +19,34 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<AppLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="aboutus" element={<AboutUs />} />
-          <Route path="ourservices" element={<OurServices />} />
-          <Route path="visainfo" element={<VisaInfo />} />
-          <Route path="universities" element={<Universities />} />
-          <Route path="uploaddocuments" element={<UploadDocuments />} />
-          <Route path="uploaddocuments/studentform" element={<StudentForm />} />
-          <Route path="uploaddocuments/partnerform" element={<PartnerForm />} />
-          <Route path="news" element={<News />} />
-          <Route path="contactus" element={<ContactUs />} />
-          <Route path="privacypolicy" element={<PrivacyPolicy />} />
-          <Route path="termsandconditions" element={<TermsAndConditions />} />
-        </Route>
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="aboutus" element={<AboutUs />} />
+            <Route path="ourservices" element={<OurServices />} />
+            <Route path="visainfo" element={<VisaInfo />} />
+            <Route path="universities" element={<Universities />} />
+            <Route path="uploaddocuments" element={<UploadDocuments />} />
+            <Route
+              path="uploaddocuments/studentform"
+              element={<StudentForm />}
+            />
+            <Route
+              path="uploaddocuments/partnerform"
+              element={<PartnerForm />}
+            />
+            <Route path="news" element={<News />} />
+            <Route path="contactus" element={<ContactUs />} />
+            <Route path="privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="termsandconditions" element={<TermsAndConditions />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+      <Toaster position="top-center" />
+    </>
   );
 }
 
