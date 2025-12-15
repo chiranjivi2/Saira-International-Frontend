@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 
 import { postStudentData } from "../services/api";
+import toast from "react-hot-toast";
 
 function StudentForm() {
   const { register, handleSubmit, formState } = useForm();
@@ -9,8 +10,6 @@ function StudentForm() {
   // console.log(errors);
 
   function onSubmit(data) {
-    console.log(data);
-    console.log(data.document[0]);
     const submissionData = new FormData();
 
     submissionData.append("name", data.name);
@@ -22,16 +21,16 @@ function StudentForm() {
     submissionData.append("document", data.document[0]);
     console.log("hello", submissionData);
 
-    for (let pair of submissionData.entries()) {
-      console.log(pair[0], pair[1]);
-    }
-
     const postData = async () => {
       try {
         const result = await postStudentData(submissionData);
-        console.log("Success:", result);
+        console.log("result:", result);
+        if (result.status === 201)
+          toast.success("form data sent successfully.");
+        else toast.error("Error submitting form.");
       } catch (err) {
         console.log("Upload failed", err);
+        toast.error("error", err);
       }
     };
     postData();

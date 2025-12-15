@@ -86,7 +86,7 @@ export const postStudentData = async (studentData) => {
       }
     );
     console.log(response);
-    return response.data;
+    return response;
   } catch (error) {
     console.error("Error sending student data:", error);
     throw error;
