@@ -74,6 +74,16 @@ export const getUniversities = async () => {
   }
 };
 
+export const getPartners = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}/partner/get`);
+    const partners = response?.data.data;
+    return partners;
+  } catch (error) {
+    console.log("Error fetching official partners:", error);
+  }
+};
+
 export const postStudentData = async (studentData) => {
   try {
     const response = await axios.post(

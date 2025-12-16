@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from "lucide-react";
 import { postContactUsData } from "../services/api";
 import { toast } from "react-hot-toast";
+import OfficialPartners from "../features/contact us/OfficialPartners";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -340,6 +341,8 @@ function ContactUs() {
             </div>
           </div>
         </div>
+
+        <OfficialPartners />
 
         <style>{`
         @keyframes fade-in {
