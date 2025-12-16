@@ -1,13 +1,43 @@
 import { useForm } from "react-hook-form";
+import { postPartnerData } from "../services/api";
+import toast from "react-hot-toast";
 
 function PartnerForm() {
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState, reset } = useForm();
 
-  const { errors } = formState;
+  const { errors, isSubmitting } = formState;
   console.log(errors);
 
   function onSubmit(data) {
     console.log(data);
+    const submissionData = new FormData();
+    submissionData.append("name", data.name);
+    submissionData.append("email", data.email);
+    submissionData.append("contactNumber", data.contactNumber);
+    submissionData.append("dob", data.dob);
+    submissionData.append("applyingForCountry", data.applyingForCountry);
+    submissionData.append("IELTS_PTE_TOEFL", data.IELTS_PTE_TOEFL);
+    submissionData.append("document", data.document[0]);
+    submissionData.append("partnerName", data.partnerName);
+    submissionData.append("partnerEmail", data.partnerEmail);
+    console.log(submissionData);
+
+    const postData = async () => {
+      try {
+        const result = await postPartnerData(submissionData);
+        toast.success("Form data sent successfully.");
+        reset();
+
+        console.log("result:", result);
+      } catch (err) {
+        const errMessage =
+          err?.response?.data?.message || "Something went wrong.";
+        console.log(errMessage);
+        toast.error(errMessage);
+        console.log("Upload failed", err);
+      }
+    };
+    postData();
   }
 
   const regxEmail = /\S+@\S+\.\S+/;
@@ -17,10 +47,10 @@ function PartnerForm() {
       <section className="bg-slate-100 py-14">
         <div className="max-w-6xl mx-auto px-8">
           <div className="mb-4">
-            <h2 className="text-[var(--color-primary-500)] text-3xl font-bold text-center mb-3">
+            <h2 className="text-(--color-primary-500) text-3xl font-bold text-center mb-3">
               Upload documents for Partners
             </h2>
-            <div className="w-30 h-1 bg-[var(--color-primary-500)] mx-auto"></div>
+            <div className="w-30 h-1 bg-(--color-primary-500) mx-auto"></div>
           </div>
           <div>
             <form
@@ -99,7 +129,7 @@ function PartnerForm() {
                   <p className="text-red-500">{errors.dob.message}</p>
                 )}
               </div>
-              <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
+              {/* <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label htmlFor="nationality" className="text-lg font-semibold">
                   Nationality
                 </label>
@@ -115,26 +145,26 @@ function PartnerForm() {
                 {errors?.nationality && (
                   <p className="text-red-500">{errors.nationality.message}</p>
                 )}
-              </div>
+              </div> */}
               <div className="grid  sm:grid-cols-[10rem_20rem] md:grid-cols-[1fr_20rem_1fr] gap-3 sm:gap-6 sm:justify-center border-b border-slate-200 py-6 items-center">
                 <label
-                  htmlFor="destinationCountry"
+                  htmlFor="applyingForCountry"
                   className="text-lg font-semibold"
                 >
                   Applying for Country
                 </label>
                 <input
                   type="text"
-                  name="destinationCountry"
-                  id="destinationCountry"
+                  name="applyingForCountry"
+                  id="applyingForCountry"
                   className="text-lg border border-slate-400 rounded-md px-2 py-1 focus:-outline-offset-1 focus:outline-blue-600"
-                  {...register("destinationCountry", {
+                  {...register("applyingForCountry", {
                     required: "This field is required.",
                   })}
                 />
-                {errors?.destinationCountry && (
+                {errors?.applyingForCountry && (
                   <p className="text-red-500">
-                    {errors.destinationCountry.message}
+                    {errors.applyingForCountry.message}
                   </p>
                 )}
               </div>
@@ -147,10 +177,10 @@ function PartnerForm() {
                     <input
                       type="radio"
                       id="yes"
-                      name="exam"
+                      name="IELTS_PTE_TOEFL"
                       value="yes"
                       className="h-4 w-4 hover:cursor-pointer"
-                      {...register("exam", {
+                      {...register("IELTS_PTE_TOEFL", {
                         required: "This field is required.",
                       })}
                     />{" "}
@@ -160,18 +190,20 @@ function PartnerForm() {
                     <input
                       type="radio"
                       id="no"
-                      name="exam"
+                      name="IELTS_PTE_TOEFL"
                       value="no"
                       className="h-4 w-4 hover:cursor-pointer"
-                      {...register("exam", {
+                      {...register("IELTS_PTE_TOEFL", {
                         required: "This field is required.",
                       })}
                     />{" "}
                     <label htmlFor="no">No</label>
                   </div>
                 </div>
-                {errors?.exam && (
-                  <p className="text-red-500">{errors.exam.message}</p>
+                {errors?.IELTS_PTE_TOEFL && (
+                  <p className="text-red-500">
+                    {errors.IELTS_PTE_TOEFL.message}
+                  </p>
                 )}
               </div>
 
@@ -250,29 +282,30 @@ function PartnerForm() {
                 </label>
                 <input
                   type="file"
-                  id="partnerDocument"
-                  name="partnerDocument"
-                  className="w-full text-lg border border-slate-400 rounded-md  focus:-outline-offset-1 focus:outline-blue-600 file:bg-blue-500 file:px-2 file:py-1 file:text-[var(--color-primary-50)] file:font-semibold file:rounded-md file:hover:bg-blue-600 file:cursor-pointer file:border-none file:mr-3 file:transition-all file:duration-300"
-                  {...register("partnerDocument", {
+                  id="document"
+                  name="document"
+                  className="w-full text-lg border border-slate-400 rounded-md  focus:-outline-offset-1 focus:outline-blue-600 file:bg-blue-500 file:px-2 file:py-1 file:text-(--color-primary-50) file:font-semibold file:rounded-md file:hover:bg-blue-600 file:cursor-pointer file:border-none file:mr-3 file:transition-all file:duration-300"
+                  {...register("document", {
                     required: "This field is required.",
                   })}
                 />
-                {errors?.partnerDocument && (
-                  <p className="text-red-500">
-                    {errors.partnerDocument.message}
-                  </p>
+                {errors?.document && (
+                  <p className="text-red-500">{errors.document.message}</p>
                 )}
               </div>
 
               {/* submit button */}
               <div className="flex gap-6 justify-end mt-5">
                 <button
-                  className="px-4 py-2 bg-slate-200 text-[var(--color-primary-600)] rounded-md hover:cursor-pointer hover:bg-slate-300 hover:shadow-xl"
+                  className="px-4 py-2 bg-slate-200 text-(--color-primary-600) rounded-md hover:cursor-pointer hover:bg-slate-300 hover:shadow-xl"
                   type="reset"
                 >
                   Cancel
                 </button>
-                <button className="px-4 py-2 bg-[var(--color-primary-400)] text-blue-50 rounded-md font-semibold hover:bg-blue-600 hover:cursor-pointer shadow-md hover:shadow-lg">
+                <button
+                  disabled={isSubmitting}
+                  className={`px-4 py-2 bg-(--color-primary-400) text-blue-50 rounded-md font-semibold ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-(--color-primary-400) hover:bg-(--color-primary-700)"}  hover:cursor-pointer shadow-md hover:shadow-lg`}
+                >
                   Submit
                 </button>
               </div>

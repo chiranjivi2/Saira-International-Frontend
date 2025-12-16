@@ -102,6 +102,26 @@ export const postStudentData = async (studentData) => {
     throw error;
   }
 };
+
+export const postPartnerData = async (partnerData) => {
+  try {
+    const response = await axios.post(
+      `${BASE_URL}/partnerdocument/create`,
+      partnerData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error("Error sending partner data:", error);
+    throw error;
+  }
+};
+
 export const postContactUsData = async (contactUsData) => {
   try {
     const response = await axios.post(
