@@ -3,12 +3,14 @@ import { NavLink } from "react-router-dom";
 
 function MobileNavigation({ setIsOpen }) {
   return (
-    <div className="absolute h-screen right-0 top-0 bg-[var(--color-primary-500)] text-[var(--color-primary-50)] p-6 w-4/5 sm:w-3/5 ">
+    <div
+      className={`absolute h-screen right-0 top-0 bg-(--color-primary-500) text-(--color-primary-50) p-6 w-4/5 sm:w-3/5  animate-slide-in-right`}
+    >
       <div className="py-4 border-b border-sky-200">
         <h2 className="text-2xl sm:text-4xl">Menu</h2>
       </div>
       <button
-        className="absolute right-2 top-2 hover:cursor-pointer hover:bg-[var(--color-primary-300)] rounded-md "
+        className="absolute right-2 top-2 hover:cursor-pointer hover:bg-(--color-primary-300) rounded-md "
         onClick={() => setIsOpen(false)}
       >
         <RxCross2 className="w-8 h-8 " />
@@ -87,6 +89,41 @@ function MobileNavigation({ setIsOpen }) {
           </NavLink>
         </li>
       </ul>
+
+      <style>{`
+        @keyframes slide-in-right{
+      from {
+      right:-100%;
+      opacity:0;
+
+      }
+      to{
+      right:0;
+      opacity:1;
+      }
+        }
+
+          .animate-slide-in-right {
+          animation: slide-in-right 0.5s ease-out;
+        }
+
+
+        @keyframes slide-out-right{
+      from {
+      right:0;
+      opacity:1;
+
+      }
+      to{
+      right:-100%;
+      opacity:0;
+      }
+        }
+
+          .animate-slide-out-right {
+          animation: slide-out-right 0.5s ease-out;
+        }
+       `}</style>
     </div>
   );
 }
