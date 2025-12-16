@@ -46,10 +46,14 @@ function Universities() {
       src: "Niels_Brock.png",
       website: "https://www.nielsbrock.com/",
     },
-    { name: "SAMK University", src: "SAMK_University.png", website:"https://www.samk.fi/en/" },
+    {
+      name: "SAMK University",
+      src: "SAMK_University.png",
+      website: "https://www.samk.fi/en/",
+    },
     {
       name: "Berlin School of Business",
-      src: "Berlin_School_of_Business_and_Innovation2.png",
+      src: "bsbi.png",
       website: "https://www.berlinsbi.com",
     },
   ];

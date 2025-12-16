@@ -9,12 +9,16 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center h-[80px] px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100">
+    <nav className="flex justify-between items-center h-20 px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100">
       <div className="h-full">
-        <img src="Saira_logo.png" className="h-full py-1" />
+        <img
+          src="Saira_logo.png"
+          alt="saira international logo"
+          className="h-full py-1"
+        />
       </div>
 
-      <ul className="hidden lg:flex gap-6 text-md  xl:text-lg xl:gap-8 items-center  font-medium text-[var(--color-primary-900)]">
+      <ul className="hidden lg:flex gap-6 text-md  xl:text-lg xl:gap-8 items-center  font-medium text-(--color-primary-900)">
         <li>
           <NavLink
             to="/"
