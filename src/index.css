@@ -2,10 +2,6 @@
 
 @import "tailwindcss";
 
-.cell {
-  @apply px-3 py-2;
-}
-
 :root {
   --color-grey-0: #fff;
   --color-grey-50: #f9fafb;

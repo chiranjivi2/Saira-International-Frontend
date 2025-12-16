@@ -7,8 +7,7 @@ export default function OfficialPartners() {
   useEffect(() => {
     const fetchOfficialPartners = async () => {
       const data = await getPartners();
-      setPartners(data);
-      console.log(data);
+      if (data) setPartners(data);
     };
     fetchOfficialPartners();
   }, []);
@@ -65,14 +64,14 @@ export default function OfficialPartners() {
               <div className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4">
                 {/* Contact Person */}
                 <div className="flex items-start gap-2 sm:gap-3">
-                  <div className="bg-blue-100 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
+                  <div className="bg-blue-100 p-1.5 sm:p-2 rounded-lg shrink-0">
                     <User className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-xs sm:text-sm text-gray-500 font-medium">
                       Contact Person
                     </p>
-                    <p className="text-sm sm:text-base text-gray-900 font-semibold break-words">
+                    <p className="text-sm sm:text-base text-gray-900 font-semibold wrap-break-words">
                       {partner.contactPersonName}
                     </p>
                   </div>
@@ -80,14 +79,14 @@ export default function OfficialPartners() {
 
                 {/* Address */}
                 <div className="flex items-start gap-2 sm:gap-3">
-                  <div className="bg-indigo-100 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
+                  <div className="bg-indigo-100 p-1.5 sm:p-2 rounded-lg shrink-0">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-xs sm:text-sm text-gray-500 font-medium">
                       Address
                     </p>
-                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed break-words">
+                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed wrap-break-words">
                       {partner.addressDetails}
                     </p>
                   </div>

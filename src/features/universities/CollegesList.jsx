@@ -46,38 +46,38 @@ function CollegesList() {
   // ];
 
   return (
-    <section className=" py-10 sm:py-16 lg:py-20 bg-[var(--color-secondary-50)]">
+    <section className=" py-10 sm:py-16 lg:py-20 bg-(--color-secondary-50)">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
-        <h3 className="text-[var(--color-primary-500)] font-semibold text-2xl sm:text-3xl md:text-4xl text-center mb-6 md:mb-9">
+        <h3 className="text-(--color-primary-500) font-semibold text-2xl sm:text-3xl md:text-4xl text-center mb-6 md:mb-9">
           List of colleges of European countries is given below
         </h3>
 
         <div className="overflow-x-auto shadow-lg mx-auto max-w-4xl rounded-2xl">
           <table className="w-full ">
-            <thead className="text-lg sm:text-xl bg-[var(--color-primary-500)] text-[var(--color-primary-50)]">
+            <thead className="text-lg sm:text-xl bg-(--color-primary-500) text-(--color-primary-50)">
               <tr className="">
-                <th className="cell">S.N.</th>
-                <th className="cell break-all text-left">
+                <th className="p-3">S.N.</th>
+                <th className="p-3 break-all text-left">
                   University/College Name
                 </th>
-                <th className="cell text-left">Location</th>
-                <th className="cell">More Details</th>
+                <th className="p-3 text-left">Location</th>
+                <th className="p-3">More Details</th>
               </tr>
             </thead>
 
             <tbody className="p-15">
               {colleges.map((college, i) => {
                 return (
-                  <tr className="even:bg-[var(--color-secondary-100)]">
-                    <td className="cell text-center">{i + 1}</td>
-                    <td className=" cell">{college.name}</td>
-                    <td className="cell ">{college.location}</td>
-                    <td className="cell text-center">
+                  <tr key={i} className=" even:bg-(--color-secondary-100) ">
+                    <td className="p-3 text-center">{i + 1}</td>
+                    <td className="p-3 ">{college.name}</td>
+                    <td className="p-3 ">{college.location}</td>
+                    <td className="p-3 text-center">
                       {" "}
                       <a
                         target="_blank"
                         href={college.link}
-                        className="text-[var(--color-primary-600)] font-semibold hover:underline"
+                        className="text-(--color-primary-600) font-semibold hover:underline"
                       >
                         Click here
                       </a>{" "}
@@ -89,7 +89,7 @@ function CollegesList() {
           </table>
         </div>
 
-        <p className="text-center text-gray-500 text-sm mt-6">
+        <p className="text-center text-gray-500 text-md mt-6">
           Click on "Click here" to view detailed information about each
           institution
         </p>
