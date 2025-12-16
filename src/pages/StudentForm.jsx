@@ -4,7 +4,7 @@ import { postStudentData } from "../services/api";
 import toast from "react-hot-toast";
 
 function StudentForm() {
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState, reset } = useForm();
 
   const { errors } = formState;
   // console.log(errors);
@@ -25,12 +25,15 @@ function StudentForm() {
       try {
         const result = await postStudentData(submissionData);
         console.log("result:", result);
-        if (result.status === 201)
-          toast.success("form data sent successfully.");
-        else toast.error("Error submitting form.");
+        reset();
+
+        toast.success("form data sent successfully.");
       } catch (err) {
+        const errMessage =
+          err?.response?.data?.message || "Something went wrong.";
+        console.log(errMessage);
+        toast.error(errMessage);
         console.log("Upload failed", err);
-        toast.error("error", err);
       }
     };
     postData();
@@ -234,7 +237,7 @@ function StudentForm() {
                 >
                   Cancel
                 </button>
-                <button className="px-4 py-2 bg-(--color-primary-400) text-blue-50 rounded-md font-semibold hover:bg-blue-600 hover:cursor-pointer shadow-md hover:shadow-lg">
+                <button className="px-4 py-2 bg-(--color-primary-400) text-blue-50 rounded-md font-semibold hover:bg-(--color-primary-700) hover:cursor-pointer shadow-md hover:shadow-lg">
                   Submit
                 </button>
               </div>
