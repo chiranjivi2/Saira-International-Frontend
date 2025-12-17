@@ -16,11 +16,13 @@ import StudentForm from "./pages/StudentForm";
 import PartnerForm from "./pages/PartnerForm";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
