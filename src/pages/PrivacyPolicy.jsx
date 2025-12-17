@@ -32,6 +32,13 @@ const PrivacyPolicy = () => {
   const [section21, setSection21] = useState(false);
 
   return (
+    <>
+  
+    <title>Privacy policy Page</title>
+      <meta
+        name="description"
+        content="This is the privacy policy page of Saira International Education and Consultancy website"
+      />
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-slate-200">
@@ -1288,6 +1295,7 @@ const PrivacyPolicy = () => {
         </footer>
       </main>
     </div>
+      </>
   );
 };
 

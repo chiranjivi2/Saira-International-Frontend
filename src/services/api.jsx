@@ -58,7 +58,7 @@ export const getBankFund = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/bankfundcountrywise/get`);
     const bankfund = response?.data.data;
-    console.log(bankfund);
+    return bankfund;
   } catch (error) {
     console.error("Error fetching bank fund :", error);
   }

@@ -36,7 +36,7 @@ function Hero() {
           {/* text */}
           <div className="relative">
             <div className=" flex flex-col gap-12 justify-center z-100">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white  text-center mt-10 z-10 font-(--font-inter)">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white  text-center mt-10 z-10 font-['Rubik']">
                 Study and Work Abroad
               </h1>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center z-10">

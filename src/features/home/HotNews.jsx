@@ -45,13 +45,13 @@ export default function HotNewsMarquee() {
   }, []);
 
   return (
-    <div className="w-full bg-gradient-to-r from-[var(--color-secondary-500)] to-[var(--color-primary-500)] py-4 overflow-hidden">
+    <div className="w-full bg-gradient-to-r from-[var(--color-secondary-500)] to-[var(--color-primary-500)] py-4 overflow-hidden font-['Rubik']">
       <div className="flex flex-col items-center">
-        <div className="shrink-0 pb-6">
+        {/* <div className="shrink-0 pb-6">
           <h2 className="text-white font-bold text-xl uppercase tracking-wider">
             🔥 Hot News
           </h2>
-        </div>
+        </div> */}
 
         <div className="relative flex overflow-hidden flex-1">
           <div className="flex animate-marquee whitespace-nowrap">

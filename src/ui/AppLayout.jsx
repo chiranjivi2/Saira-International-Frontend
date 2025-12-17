@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function AppLayout() {
   return (
-    <div className="font-sans text-[var(--color-grey-700)]">
+    <div className="font-['Nunito'] text-[var(--color-grey-700)]">
       <Navbar />
       <div>
         <main>

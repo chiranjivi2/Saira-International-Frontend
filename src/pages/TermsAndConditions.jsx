@@ -130,87 +130,95 @@ const TermsAndConditions = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-6">
-          <div className="flex items-center gap-3 mb-4">
-            <FileText className="w-10 h-10 text-indigo-600" />
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                Terms and Conditions
-              </h1>
-              <p className="text-sm text-gray-500 mt-1">
-                Last updated: 19th Nov 2025
+    <>
+      <title>Terms and Conditions Page</title>
+      <meta
+        name="description"
+        content="This is the Terms and conditions page of Saira International Education and Consultancy website"
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          {/* Header */}
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-6">
+            <div className="flex items-center gap-3 mb-4">
+              <FileText className="w-10 h-10 text-indigo-600" />
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">
+                  Terms and Conditions
+                </h1>
+                <p className="text-sm text-gray-500 mt-1">
+                  Last updated: 19th Nov 2025
+                </p>
+              </div>
+            </div>
+            <div className="border-t pt-4 mt-4">
+              <p className="text-gray-700">
+                <span className="font-semibold">
+                  Saira International Education and Consultancy
+                </span>{" "}
+                - sairainternational.com.np
               </p>
             </div>
           </div>
-          <div className="border-t pt-4 mt-4">
-            <p className="text-gray-700">
-              <span className="font-semibold">
-                Saira International Education and Consultancy
-              </span>{" "}
-              - sairainternational.com.np
-            </p>
-          </div>
-        </div>
 
-        {/* Sections */}
-        <div className="space-y-3">
-          {sections.map((section) => (
-            <div
-              key={section.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
-              <button
-                onClick={() => toggleSection(section.id)}
-                className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+          {/* Sections */}
+          <div className="space-y-3">
+            {sections.map((section) => (
+              <div
+                key={section.id}
+                className="bg-white rounded-lg shadow-md overflow-hidden"
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-indigo-600 font-semibold text-lg">
-                    {section.id}.
-                  </span>
-                  <h2 className="text-lg font-semibold text-gray-900 text-left">
-                    {section.title}
-                  </h2>
-                </div>
-                {expandedSections[section.id] ? (
-                  <ChevronUp className="w-5 h-5 text-gray-500" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500" />
+                <button
+                  onClick={() => toggleSection(section.id)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-indigo-600 font-semibold text-lg">
+                      {section.id}.
+                    </span>
+                    <h2 className="text-lg font-semibold text-gray-900 text-left">
+                      {section.title}
+                    </h2>
+                  </div>
+                  {expandedSections[section.id] ? (
+                    <ChevronUp className="w-5 h-5 text-gray-500" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                  )}
+                </button>
+
+                {expandedSections[section.id] && (
+                  <div className="px-6 pb-4 pt-2 border-t border-gray-100">
+                    <p className="text-gray-700 leading-relaxed">
+                      {section.content}
+                    </p>
+                  </div>
                 )}
-              </button>
-
-              {expandedSections[section.id] && (
-                <div className="px-6 pb-4 pt-2 border-t border-gray-100">
-                  <p className="text-gray-700 leading-relaxed">
-                    {section.content}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Footer */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
-          <div className="flex items-center gap-2 text-indigo-600 mb-2">
-            <Mail className="w-5 h-5" />
-            <h3 className="font-semibold">Contact Information</h3>
+              </div>
+            ))}
           </div>
-          <p className="text-gray-700">
-            For any questions or concerns regarding these Terms of Service,
-            please contact us at:
-          </p>
-          <a
-            href="mailto:sairainternationaledu@gmail.com"
-            className="text-indigo-600 hover:text-indigo-800 font-medium mt-2 inline-block"
-          >
-            sairainternationaledu@gmail.com
-          </a>
+
+          {/* Footer */}
+          <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
+            <div className="flex items-center gap-2 text-indigo-600 mb-2">
+              <Mail className="w-5 h-5" />
+              <h3 className="font-semibold">Contact Information</h3>
+            </div>
+            <p className="text-gray-700">
+              For any questions or concerns regarding these Terms of Service,
+              please contact us at:
+            </p>
+            <a
+              href="mailto:sairainternationaledu@gmail.com"
+              className="text-indigo-600 hover:text-indigo-800 font-medium mt-2 inline-block"
+            >
+              sairainternationaledu@gmail.com
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -44,6 +44,11 @@ function PartnerForm() {
 
   return (
     <>
+      <title>Partner Form Page</title>
+      <meta
+        name="description"
+        content="This is the partner form page of Saira International Education and Consultancy website"
+      />
       <section className="bg-slate-100 py-14">
         <div className="max-w-6xl mx-auto px-8">
           <div className="mb-4">

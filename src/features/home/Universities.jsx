@@ -59,7 +59,7 @@ function Universities() {
   ];
 
   return (
-    <section className="py-16 bg-slate-50">
+    <section className="py-16 bg-slate-50 font-['Rubik']">
       <div className="max-w-[1200px] px-8 mx-auto">
         <h2 className="text-[var(--color-primary-500)] font-semibold text-3xl sm:text-4xl text-center mb-12">
           Famous Universities of Europe

@@ -72,6 +72,11 @@ function ContactUs() {
 
   return (
     <>
+      <title>Contact Us Page</title>
+      <meta
+        name="description"
+        content="This is the contact us page of Saira International Education and Consultancy website"
+      />
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-[var(--color-primary-500)] to-[var(--color-secondary-500)] text-white py-20">

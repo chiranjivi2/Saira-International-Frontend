@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Welcome() {
   const navigate = useNavigate();
   return (
-    <section className="py-14 bg-(--color-secondary-0)">
+    <section className="py-14 bg-(--color-secondary-0) font-['Rubik']">
       <div className="max-w-[1200px] mx-auto px-8 text-center">
         <span className="block mb-4 font-medium text-3xl italic">
           Welcome to
@@ -22,7 +22,7 @@ function Welcome() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           <div className="">
-            <p className="text-justify text-lg leading-8 mb-8">
+            <p className="text-justify text-lg leading-8 mb-8 ">
               Saira International Education and Consultancy is Genuine overseas
               education consultant, we give 100% Transparency for people who
               want to go Abroad – whether for studying, working, or migrating

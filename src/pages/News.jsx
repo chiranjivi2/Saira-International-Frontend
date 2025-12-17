@@ -27,7 +27,12 @@ function News() {
     fetchNews();
   }, []);
   return (
-    <div>
+    <>
+      <title>News Page</title>
+      <meta
+        name="description"
+        content="This is the News page of Saira International Education and Consultancy website"
+      />
       <section className="bg-gradient-to-r from-[var(--color-primary-500)] to-[var(--color-secondary-500)] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4 animate-fade-in">
@@ -96,7 +101,7 @@ function News() {
         }
           `}
       </style>
-    </div>
+    </>
   );
 }
 

@@ -27,7 +27,7 @@ function Countries() {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 font-['Rubik']">
       <div className="max-w-[1200px] px-8 mx-auto">
         <h2 className="text-3xl md:text-4xl  text-[var(--color-primary-500)] text-center font-semibold  mb-10">
           Countries we represent

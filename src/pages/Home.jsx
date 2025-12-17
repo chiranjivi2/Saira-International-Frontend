@@ -13,7 +13,12 @@ import FAQ from "../ui/Faq";
 
 function Home() {
   return (
-    <div>
+    <>
+      <title>Home Page</title>
+      <meta
+        name="description"
+        content="This is the Home page of Saira International Education and Consultancy website"
+      />
       {/* <section>
         <div className="h-[calc(100vh-80px)] bg-[var(--color-primary)]">
           <img
@@ -34,7 +39,7 @@ function Home() {
       <Card />
 
       <FAQ />
-    </div>
+    </>
   );
 }
 

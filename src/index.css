@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 @import "tailwindcss";
 
@@ -45,11 +46,12 @@
   --color-secondary-900: #173e54;
 
   --font-inter: "Inter", system-ui, sans-serif;
+  --font-rubik: "Rubik", sans-serif;
 }
 /* body {
   font-family: "Nunito", sans-serif;
 } */
 
 body {
-  font-family: var(--font-inter);
+  font-family: "Rubik";
 }

@@ -9,7 +9,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center h-20 px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100">
+    <nav className="flex justify-between items-center h-20 px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100 font-['Nunito'] ">
       <div className="h-full">
         <img
           src="Saira_logo.png"
@@ -18,14 +18,14 @@ function Navbar() {
         />
       </div>
 
-      <ul className="hidden lg:flex gap-6 text-md  xl:text-lg xl:gap-8 items-center  font-medium text-(--color-primary-900)">
+      <ul className="hidden lg:flex gap-6 text-md   xl:gap-8 items-center  font-bold text-(--color-primary-900)">
         <li>
           <NavLink
             to="/"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             Home
           </NavLink>
@@ -35,8 +35,8 @@ function Navbar() {
             to="/aboutus"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             About Us
           </NavLink>
@@ -46,8 +46,8 @@ function Navbar() {
             to="/ourservices"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             Our Services
           </NavLink>
@@ -57,8 +57,8 @@ function Navbar() {
             to="/visainfo"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             Visa Info
           </NavLink>
@@ -68,8 +68,8 @@ function Navbar() {
             to="/universities"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             Universities
           </NavLink>
@@ -79,8 +79,8 @@ function Navbar() {
             to="/uploaddocuments"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             Upload Documents
           </NavLink>
@@ -90,8 +90,8 @@ function Navbar() {
             to="/news"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             News
           </NavLink>
@@ -101,15 +101,15 @@ function Navbar() {
             to="/contactus"
             className={({
               isActive,
-            }) => `   py-6  hover:text-indigo-600 hover:border-b-4 hover:border-indigo-500
-              ${isActive && "text-indigo-600 border-b-4 border-indigo-500"}`}
+            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
+              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
           >
             Contact Us
           </NavLink>
         </li>
       </ul>
       <HiOutlineBars3
-        className="h-10 w-10 text-[var(--color-primary-500)] hover:cursor-pointer hover:text-[var(--color-primary-700)] lg:hidden"
+        className="h-10 w-10 text-(--color-primary-500) hover:cursor-pointer hover:text-(--color-primary-700) lg:hidden"
         onClick={() => setIsOpen((open) => !open)}
       />
 
