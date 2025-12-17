@@ -79,7 +79,7 @@ function ContactUs() {
       />
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-[var(--color-primary-500)] to-[var(--color-secondary-500)] text-white py-20">
+        <div className="bg-(--color-primary-500) text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold mb-4 animate-fade-in">
               Get In Touch
