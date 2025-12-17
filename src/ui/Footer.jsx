@@ -31,6 +31,7 @@ function Footer() {
               </a>
               <a
                 href="#"
+                target="_blank"
                 className="hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <FaInstagram className="h-6 w-6" />
@@ -43,7 +44,8 @@ function Footer() {
                 <FaWhatsapp className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@sairainternationa?_r=1&_t=ZS-92In4MH0HX3"
+                target="_blank"
                 className="hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <FaTiktok className="h-6 w-6" />

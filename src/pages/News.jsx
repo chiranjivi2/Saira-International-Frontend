@@ -53,9 +53,9 @@ function News() {
               return (
                 <div
                   key={index}
-                  className="flex gap-15 shadow-2xl rounded-2xl overflow-hidden mb-12 bg-slate-100"
+                  className="flex flex-col lg:flex-row gap-3  lg:gap-15 shadow-2xl rounded-2xl overflow-hidden mb-12 bg-slate-100"
                 >
-                  <div className="w-110 h-75 shrink-0 rounded-2xl overflow-hidden relative group ">
+                  <div className="w-full md:w-3/4  lg:w-110 sm:h-80 lg:h-75 shrink-0 rounded-2xl overflow-hidden relative group mx-auto">
                     <img
                       className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 "
                       src={n.imageURL}
@@ -63,7 +63,7 @@ function News() {
                     />
                     <div className="absolute inset-0  bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                  <div className="p-2 py-5 flex flex-col gap-2 ">
+                  <div className="px-6 md:px-10 py-5 flex flex-col gap-2 ">
                     <a
                       href="https://timesofmalta.com/article/foreign-nationals-living-malta.1014183/"
                       target="_blank"
