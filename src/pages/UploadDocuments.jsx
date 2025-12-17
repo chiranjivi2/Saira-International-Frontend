@@ -25,7 +25,7 @@ function UploadDocuments() {
               <div className="w-xs sm:w-lg lg:w-md h-60 sm:h-80 mb-8 relative group overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                  src="uploadDocuments/students.jpg"
+                  src="uploadDocuments/students.jpeg"
                   alt="students"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -44,7 +44,7 @@ function UploadDocuments() {
               <div className="w-xs sm:w-lg lg:w-md h-60 sm:h-80 mb-8 relative group overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   className="object-cover h-full w-full transition-transform duration-700 group-hover:scale-110"
-                  src="uploadDocuments/partners.jpg"
+                  src="uploadDocuments/partners.jpeg"
                   alt="partners"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

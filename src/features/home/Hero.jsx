@@ -2,19 +2,19 @@ function Hero() {
   const destinations = [
     {
       name: "Australia",
-      image: "home/Australia.jpg",
+      image: "home/Australia.jpeg",
     },
     {
       name: "Japan",
-      image: "home/Japan.jpg",
+      image: "home/Japan.jpeg",
     },
     {
       name: "Malta",
-      image: "home/Malta.jpg",
+      image: "home/Malta.jpeg",
     },
     {
       name: "New Zealand",
-      image: "home/NewZealand.jpg",
+      image: "home/NewZealand.jpeg",
     },
   ];
 
@@ -26,11 +26,15 @@ function Hero() {
             <img
               className="h-full object-cover"
               src="home/girl-sit-on-suitcase.png"
+              alt="girl carrying suitcase"
             />
           </div>
 
           <div className="sm:w-3/4 lg:hidden ">
-            <img src="home/girl-with-suitcase-and-pp.png" />
+            <img
+              src="home/girl-with-suitcase-and-pp.png"
+              alt="girl holding passport"
+            />
           </div>
 
           {/* text */}
@@ -50,6 +54,7 @@ function Hero() {
                         <img
                           className="h-full w-full object-cover group-hover:scale-110 transition-all duration-500"
                           src={destination.image}
+                          alt={destination.name}
                         />
                       </div>
                       <p className="bg-white px-5 rounded-3xl text-center font-semibold">
@@ -63,6 +68,7 @@ function Hero() {
             <img
               className="absolute inset-0 opacity-30  "
               src="home/map.webp"
+              alt="world map"
             />
           </div>
         </div>

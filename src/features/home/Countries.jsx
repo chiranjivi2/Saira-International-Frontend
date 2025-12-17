@@ -40,7 +40,12 @@ function Countries() {
                 key={i}
               >
                 {" "}
-                <img className="w-10" src={country.src} /> <p>{country.name}</p>
+                <img
+                  className="w-10"
+                  src={country.src}
+                  alt={`flag of ${country.name}`}
+                />{" "}
+                <p>{country.name}</p>
               </div>
             );
           })}

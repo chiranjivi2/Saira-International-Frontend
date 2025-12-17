@@ -24,7 +24,7 @@ function AboutUs() {
               <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src="working_professional_in_office.jpeg"
-                  alt="Education"
+                  alt="Saira International Education and Consultancy staffs"
                   className="w-full lg:h-[400px] h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
