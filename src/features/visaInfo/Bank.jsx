@@ -101,10 +101,10 @@ function Bank() {
                   </p>
 
                   <ul className="flex flex-col gap-2 text-lg">
-                    {country.details.map((detail) => (
-                      <li className="flex gap-6 items-center">
+                    {country.details.map((detail, index) => (
+                      <li key={index} className="flex gap-6 items-center">
                         <div>
-                          <FaCircle className="h-6 w-6 text-(--color-primary-500)" />
+                          <FaCircle className="h-5 w-5 text-(--color-primary-500)" />
                         </div>
                         <span>{detail}</span>
                       </li>

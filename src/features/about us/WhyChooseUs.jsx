@@ -1,12 +1,12 @@
 function WhyChooseUs() {
   return (
-    <section className="py-14 bg-[var(--color-primary-50)]">
+    <section className="py-14 bg-(--color-primary-50)">
       <div className="max-w-6xl mx-auto px-12">
         <div className="text-center mb-12 md:mb-16">
-          <h3 className="text-[var(--color-primary-500)] text-2xl sm:text-3xl lg:text-4xl mb-3 font-bold ">
+          <h3 className="text-(--color-primary-500) text-2xl sm:text-3xl lg:text-4xl mb-3 font-bold ">
             Why Choose Us
           </h3>
-          <div className="w-20 h-1 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-(--color-primary-500) mx-auto rounded-full"></div>
         </div>
 
         {/* abroad education consultant  */}
@@ -19,7 +19,7 @@ function WhyChooseUs() {
             />
           </div>
           <div className="">
-            <h4 className="text-2xl text-[var(--color-primary-400)] font-medium mb-4">
+            <h4 className="text-2xl text-(--color-primary-400) font-medium mb-4">
               Abroad Education Consultant
             </h4>
             <p className="leading-7 text-justify text-lg ">

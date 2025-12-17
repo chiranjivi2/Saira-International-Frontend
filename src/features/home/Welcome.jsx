@@ -35,7 +35,7 @@ function Welcome() {
               WhatsApp/Email.
             </p>
             <button
-              className="px-8 py-3 font-medium bg-indigo-600 text-indigo-50 rounded-md block transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-indigo-700"
+              className="px-8 py-3 font-medium bg-(--color-secondary-500) text-indigo-50 rounded-md block transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-(--color-secondary-700)"
               onClick={() => navigate("/aboutus")}
             >
               Learn more

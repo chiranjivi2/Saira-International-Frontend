@@ -1,4 +1,3 @@
-import BankFund from "./BankFund";
 import StudyVisa from "./StudyVisa";
 
 function VisaDetails() {

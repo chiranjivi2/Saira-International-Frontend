@@ -47,7 +47,7 @@ export default function OfficialPartners() {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-6 md:gap-8">
           {partners.map((partner, index) => (
             <div
               key={index}

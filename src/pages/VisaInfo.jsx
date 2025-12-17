@@ -1,7 +1,6 @@
 import Bank from "../features/visaInfo/Bank";
-import BankFund from "../features/visaInfo/BankFund";
+
 import VisaDetails from "../features/visaInfo/VisaDetails";
-import VisaImage from "../features/visaInfo/VisaImage";
 
 function VisaInfo() {
   return (
@@ -20,8 +19,6 @@ function VisaInfo() {
       </section>
 
       <Bank />
-
-      <VisaImage />
 
       <VisaDetails />
     </>

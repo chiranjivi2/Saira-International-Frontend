@@ -27,12 +27,12 @@ function AboutUs() {
                   alt="Saira International Education and Consultancy staffs"
                   className="w-full lg:h-[400px] h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               {/*text */}
               <div className="">
-                <h1 className="text-[var(--color-primary-500)] text-4xl font-bold mb-5 leading-tight">
+                <h1 className="text-(--color-primary-500) text-3xl sm:text-4xl font-bold mb-5 leading-tight">
                   Saira International Education and Visa Services
                 </h1>
                 <p className="text-justify text-lg leading-relaxed mb-8">
