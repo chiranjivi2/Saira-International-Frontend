@@ -79,9 +79,9 @@ function ContactUs() {
       />
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Hero Section */}
-        <div className="bg-(--color-primary-500) text-white py-20">
+        <div className="bg-(--color-primary-500) text-white py-12 sm:py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold mb-4 animate-fade-in">
+            <h1 className="text-3xl sm:text-5xl font-bold  animate-fade-in">
               Get In Touch
             </h1>
             {/* <p className="text-xl text-indigo-100 max-w-2xl mx-auto">
@@ -91,67 +91,79 @@ function ContactUs() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div className="animate-slide-in-left">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
                   Let's Connect
                 </h2>
-                <p className="text-gray-600 mb-8">
+                <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
                   Fill out the form and our team will get back to you within 24
                   hours.
                 </p>
               </div>
 
               {/* Contact Cards */}
-              <div className="space-y-4">
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="bg-indigo-100 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-indigo-600" />
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="bg-indigo-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                    <p className="text-gray-600">
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-gray-800 mb-1 text-sm sm:text-base">
+                      Email
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm break-words">
                       sairainternationaledu@gmail.com
                     </p>
-                    {/* <p className="text-gray-600">support@company.com</p> */}
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="bg-purple-100 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-purple-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="bg-purple-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                    <p className="text-gray-600">9768827874</p>
-                    <p className="text-gray-600">9768827875</p>
+                    <h3 className="font-semibold text-gray-800 mb-1 text-sm sm:text-base">
+                      Phone
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm">
+                      9768827874
+                    </p>
+                    <p className="text-gray-600 text-xs sm:text-sm">
+                      9768827875
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="bg-pink-100 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-pink-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="bg-pink-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-pink-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Office</h3>
-                    <p className="text-gray-600">Traffic-Chowk, Butwal</p>
-                    <p className="text-gray-600">Nepal</p>
+                    <h3 className="font-semibold text-gray-800 mb-1 text-sm sm:text-base">
+                      Office
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm">
+                      Traffic-Chowk, Butwal
+                    </p>
+                    <p className="text-gray-600 text-xs sm:text-sm">Nepal</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="bg-green-100 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-green-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="bg-green-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">
+                    <h3 className="font-semibold text-gray-800 mb-1 text-sm sm:text-base">
                       Working Hours
                     </h3>
-                    <p className="text-gray-600">Sunday - Friday: 10AM - 5PM</p>
-                    {/* <p className="text-gray-600">Weekend: 10AM - 4PM</p> */}
+                    <p className="text-gray-600 text-xs sm:text-sm">
+                      Sunday - Friday: 10AM - 5PM
+                    </p>
                   </div>
                 </div>
               </div>

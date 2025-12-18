@@ -2,15 +2,16 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { HiOutlineBars3 } from "react-icons/hi2";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import MobileNavigation from "./MobileNavigation";
 
 function Navbar() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="flex justify-between items-center h-20 px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100 font-['Nunito'] ">
-      <div className="h-full">
+      <div onClick={() => navigate("/")} className="h-full cursor-pointer">
         <img
           src="Saira_logo.png"
           alt="saira international logo"
@@ -24,8 +25,8 @@ function Navbar() {
             to="/"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             Home
           </NavLink>
@@ -35,8 +36,8 @@ function Navbar() {
             to="/aboutus"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             About Us
           </NavLink>
@@ -46,8 +47,8 @@ function Navbar() {
             to="/ourservices"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             Our Services
           </NavLink>
@@ -57,8 +58,8 @@ function Navbar() {
             to="/visainfo"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             Visa Info
           </NavLink>
@@ -68,8 +69,8 @@ function Navbar() {
             to="/universities"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             Universities
           </NavLink>
@@ -79,8 +80,8 @@ function Navbar() {
             to="/uploaddocuments"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             Upload Documents
           </NavLink>
@@ -90,8 +91,8 @@ function Navbar() {
             to="/news"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             News
           </NavLink>
@@ -101,8 +102,8 @@ function Navbar() {
             to="/contactus"
             className={({
               isActive,
-            }) => `   py-6  hover:text-(--color-secondary-500) hover:border-b-4 hover:border-(--color-secondary-500)
-              ${isActive && "text-(--color-secondary-500) border-b-4 border-(--color-secondary-500)"}`}
+            }) => `   py-6  hover:text-(--color-secondary-400) hover:border-b-4 hover:border-(--color-secondary-400)
+              ${isActive && "text-(--color-secondary-600)  border-b-4 border-(--color-secondary-600) hover:text-(--color-secondary-600)  hover:border-(--color-secondary-600) "}`}
           >
             Contact Us
           </NavLink>

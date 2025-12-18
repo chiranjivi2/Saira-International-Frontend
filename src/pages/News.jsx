@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getNews } from "../services/api";
+import Banner from "../ui/Banner";
 
 function News() {
   // const news = [
@@ -33,17 +34,7 @@ function News() {
         name="description"
         content="This is the News page of Saira International Education and Consultancy website"
       />
-      <section className="bg-(--color-primary-500) text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4 animate-fade-in">
-            Latest News
-          </h1>
-          {/* <p className="text-xl text-indigo-100 max-w-2xl mx-auto">
-            Have a question or want to work together? We'd love to hear from
-            you.
-          </p> */}
-        </div>
-      </section>
+      <Banner page="Latest News" />
 
       {/* news section */}
       <section className="py-14 bg-[var(--color-secondary-50)]">

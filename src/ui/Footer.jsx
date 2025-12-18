@@ -57,7 +57,7 @@ function Footer() {
             <h3 className="text-xl font-semibold text-white mb-3 sm:mb-6 ">
               Quick Links
             </h3>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-2 sm:space-y-3 ">
               <li>
                 <a
                   href="#"
@@ -69,7 +69,7 @@ function Footer() {
               <li>
                 <a
                   href="/aboutus"
-                  className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
+                  className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1   transform"
                 >
                   About Us
                 </a>
@@ -133,7 +133,7 @@ function Footer() {
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/ourservices"
                   className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
                 >
                   Career Counselling
@@ -141,7 +141,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/visainfo"
                   className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
                 >
                   Visa Application
@@ -154,41 +154,29 @@ function Footer() {
 
           <div>
             <h3 className="text-xl font-semibold text-white mb-3 sm:mb-6">
-              Explore Countries
+              Popular Choices
             </h3>
 
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a
-                  href="#"
-                  className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
-                >
+                <span className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform">
                   Study in Malta
-                </a>
+                </span>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
-                >
+                <span className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform">
                   Study in Japan
-                </a>
+                </span>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
-                >
+                <span className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform">
                   Study in New Zealand
-                </a>
+                </span>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform"
-                >
+                <span className="text-[var(--color-primary-50)] hover:text-white transition-colors duration-200 inline-block hover:translate-x-1 transform">
                   Study in South Korea
-                </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -217,7 +205,12 @@ function Footer() {
           >
             Terms and Conditions
           </p>
-          <p>Disclaimer</p>
+          <p
+            onClick={() => navigate("/disclaimer")}
+            className="cursor-pointer hover:underline"
+          >
+            Disclaimer
+          </p>
         </div>
       </div>
     </section>

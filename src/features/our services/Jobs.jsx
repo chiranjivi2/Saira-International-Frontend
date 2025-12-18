@@ -12,7 +12,7 @@ function Jobs() {
           <div className="relative group rounded-xl overflow-hidden sm:w-3/4 w-full ">
             <img
               className="lg:h-[400px]  h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="ourservices/work_abroad.jpeg"
+              src="ourservices/work_abroad.webp"
               alt="work abroad"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

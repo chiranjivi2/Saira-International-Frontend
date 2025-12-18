@@ -74,7 +74,7 @@ function Bank() {
 
   return (
     <section className="py-14 bg-[var(--color-primary-50)]">
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto sm:px-8">
         <h3 className="text-3xl text-[var(--color-primary-500)] text-center font-bold mb-12">
           Show Bank Funds for Study Visa
         </h3>
@@ -86,7 +86,7 @@ function Bank() {
             return (
               <div
                 key={country._id}
-                className="flex flex-col  rounded-2xl overflow-hidden w-80 xl:w-85  lg:w-75 sm:w-80  shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                className="flex flex-col  rounded-2xl overflow-hidden w-70 xl:w-85  lg:w-75 sm:w-80  shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="w-sm sm:w-2xl h-50 ">
                   <img
@@ -104,7 +104,7 @@ function Bank() {
                     {country.details.map((detail, index) => (
                       <li key={index} className="flex gap-6 items-center">
                         <div>
-                          <FaCircle className="h-5 w-5 text-(--color-primary-500)" />
+                          <FaCircle className="h-3 w-3  text-(--color-primary-500)" />
                         </div>
                         <span>{detail}</span>
                       </li>

@@ -12,7 +12,7 @@ function StudyAbroad() {
           <div className=" relative group rounded-xl overflow-hidden sm:w-3/4 w-full">
             <img
               className=" object-cover transition-transform duration-700 group-hover:scale-110"
-              src="ourservices/study_abroad.jpeg"
+              src="ourservices/study_abroad.webp"
               alt="study abroad"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

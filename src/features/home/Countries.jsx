@@ -27,9 +27,9 @@ function Countries() {
   ];
 
   return (
-    <section className="py-16 font-['Rubik']">
+    <section className="py-16 ">
       <div className="max-w-[1200px] px-8 mx-auto">
-        <h2 className="text-3xl md:text-4xl  text-[var(--color-primary-500)] text-center font-semibold  mb-10">
+        <h2 className="text-3xl md:text-4xl  text-(--color-primary-500) text-center font-bold  mb-10">
           Countries we represent
         </h2>
         <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 pl-6">

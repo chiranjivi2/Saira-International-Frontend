@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Banner from "../ui/Banner";
 
 function UploadDocuments() {
   const navigate = useNavigate();
@@ -9,13 +10,7 @@ function UploadDocuments() {
         name="description"
         content="This is the upload document page of Saira International Education and Consultancy website"
       />
-      <section className="bg-[var(--color-primary-500)] text-[var(--color-primary-50)]">
-        <div className="py-18">
-          <h1 className="text-4xl sm:text-5xl text-center font-bold">
-            Upload Documents
-          </h1>
-        </div>
-      </section>
+      <Banner page="Upload Documents" />
 
       <section className="py-16">
         <div className="max-w-6xl mx-auto sm:px-8">
@@ -25,7 +20,7 @@ function UploadDocuments() {
               <div className="w-xs sm:w-lg lg:w-md h-60 sm:h-80 mb-8 relative group overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                  src="uploadDocuments/students.jpeg"
+                  src="uploadDocuments/students.webp"
                   alt="students"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -44,7 +39,7 @@ function UploadDocuments() {
               <div className="w-xs sm:w-lg lg:w-md h-60 sm:h-80 mb-8 relative group overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   className="object-cover h-full w-full transition-transform duration-700 group-hover:scale-110"
-                  src="uploadDocuments/partners.jpeg"
+                  src="uploadDocuments/partners.webp"
                   alt="partners"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

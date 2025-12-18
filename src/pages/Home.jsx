@@ -14,7 +14,7 @@ import FAQ from "../ui/Faq";
 function Home() {
   return (
     <>
-      <title>Home Page</title>
+      <title>Saira International</title>
       <meta
         name="description"
         content="This is the Home page of Saira International Education and Consultancy website"

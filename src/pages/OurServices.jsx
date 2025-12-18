@@ -1,6 +1,7 @@
 import Help from "../features/our services/Help";
 import Jobs from "../features/our services/Jobs";
 import StudyAbroad from "../features/our services/StudyAbroad";
+import Banner from "../ui/Banner";
 
 function OurServices() {
   return (
@@ -10,13 +11,7 @@ function OurServices() {
         name="description"
         content="This is the Our Services page of Saira International Education and Consultancy website"
       />
-      <section className="bg-(--color-primary-500) text-(--color-primary-50)">
-        <div className="py-18">
-          <h1 className="text-4xl sm:text-5xl text-center font-bold">
-            Our Services
-          </h1>
-        </div>
-      </section>
+      <Banner page="Our Services" />
 
       <Help />
 

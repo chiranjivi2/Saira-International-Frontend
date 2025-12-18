@@ -15,10 +15,10 @@ export default function Card() {
   }, []);
 
   return (
-    <section className="py-14 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden font-['Rubik']">
+    <section className="py-14 bg-linear-to-br from-slate-50 to-slate-100 overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[var(--color-primary-500)] mb-8 text-center">
-          Featured Collection
+        <h2 className="text-3xl sm:text-4xl font-bold text-(--color-primary-500) mb-10 text-center">
+          Featured Collections
         </h2>
 
         <div className="relative w-full overflow-hidden">

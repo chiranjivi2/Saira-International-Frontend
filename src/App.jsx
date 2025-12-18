@@ -17,6 +17,7 @@ import PartnerForm from "./pages/PartnerForm";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ScrollToTop from "./utils/ScrollToTop";
+import DisclaimerPage from "./pages/Disclaimer";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path="contactus" element={<ContactUs />} />
             <Route path="privacypolicy" element={<PrivacyPolicy />} />
             <Route path="termsandconditions" element={<TermsAndConditions />} />
+            <Route path="disclaimer" element={<DisclaimerPage />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

@@ -1,6 +1,7 @@
 import Mission from "../features/about us/Mission";
 import WhatWeDo from "../features/about us/WhatWeDo";
 import WhyChooseUs from "../features/about us/WhyChooseUs";
+import Banner from "../ui/Banner";
 
 function AboutUs() {
   return (
@@ -11,13 +12,9 @@ function AboutUs() {
         content="This is the about us page of Saira International Education and Consultancy website"
       />
       <main>
-        <section className="bg-(--color-primary-500) text-(--color-primary-50)">
-          <div className="py-18">
-            <h1 className="text-5xl text-center font-bold">About Us</h1>
-          </div>
-        </section>
+        <Banner page="About Us" />
 
-        <section className="py-14 bg-(--color-secondary-50)">
+        <section className="py-4 lg:py-8 bg-(--color-secondary-50)">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 items-center p-6">
               {/* image */}
@@ -32,10 +29,10 @@ function AboutUs() {
 
               {/*text */}
               <div className="">
-                <h1 className="text-(--color-primary-500) text-3xl sm:text-4xl font-bold mb-5 leading-tight">
+                <h1 className="text-(--color-primary-500) text-2xl sm:text-4xl font-bold mb-5 leading-tight">
                   Saira International Education and Visa Services
                 </h1>
-                <p className="text-justify text-lg leading-relaxed mb-8">
+                <p className="text-justify sm:text-lg leading-relaxed mb-8">
                   Saira International Education and Visa Services is Genuine
                   overseas education consultant, we give 100% Transparency for
                   people who want to go Abroad – whether for studying, working,

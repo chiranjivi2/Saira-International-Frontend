@@ -1,6 +1,6 @@
 function Mission() {
   return (
-    <section className="py-14 bg-(--color-secondary-50)">
+    <section className="py-4 bg-(--color-secondary-50)">
       <div className="max-w-6xl mx-auto px-8">
         <h3 className="text-(--color-primary-500) text-2xl sm:text-3xl  mb-8 font-semibold text-center">
           Our Mission

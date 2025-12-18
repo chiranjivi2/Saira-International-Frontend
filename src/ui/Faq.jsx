@@ -78,7 +78,7 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl  font-bold text-(--color-primary-500) mb-4">
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-600">
