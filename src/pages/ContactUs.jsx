@@ -60,6 +60,15 @@ function ContactUs() {
         const result = await postContactUsData(formData);
 
         toast.success("form data sent successfully.");
+        setFormData({
+          fullName: "",
+          email: "",
+
+          query: "",
+          phoneNo: "",
+          qualification: "",
+          intrestedIn: "",
+        });
 
         console.log("result:", result);
       } catch (err) {

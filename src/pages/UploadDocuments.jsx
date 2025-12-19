@@ -27,7 +27,7 @@ function UploadDocuments() {
               </div>
               <div>
                 <button
-                  className="bg-[var(--color-primary-400)]  px-5 py-2 text-[var(--color-primary-50)] font-bold cursor-pointer rounded-sm mx-auto shadow-md hover:bg-[var(--color-primary-600)] hover:shadow-xl transition-all duration-300"
+                  className="bg-[var(--color-secondary-500)]  px-5 py-2 text-white font-bold cursor-pointer rounded-sm mx-auto shadow-md hover:bg-[var(--color-secondary-700)] hover:shadow-xl transition-all duration-300"
                   onClick={() => navigate("/uploaddocuments/studentform")}
                 >
                   For Students{" "}
@@ -46,7 +46,7 @@ function UploadDocuments() {
               </div>
               <div>
                 <button
-                  className="bg-[var(--color-primary-400)]  px-5 py-2 text-[var(--color-primary-50)] font-bold cursor-pointer rounded-sm shadow-md mx-auto hover:bg-[var(--color-primary-600)] hover:shadow-xl transition-all duration-300"
+                  className="bg-(--color-secondary-500)  px-5 py-2 text-white font-bold cursor-pointer rounded-sm shadow-md mx-auto hover:bg-[var(--color-secondary-700)] hover:shadow-xl transition-all duration-300"
                   onClick={() => navigate("/uploaddocuments/partnerform")}
                 >
                   For Partners{" "}

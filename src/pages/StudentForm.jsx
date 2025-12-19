@@ -221,10 +221,9 @@ function StudentForm() {
                 </label>
                 <input
                   type="file"
-                  accept="image/*"
                   id="document"
                   name="document"
-                  className="w-full text-lg border border-slate-400 rounded-md  focus:-outline-offset-1 focus:outline-blue-600 file:bg-blue-500 file:px-2 file:py-1 file:text-(--color-primary-50) file:font-semibold file:rounded-md file:hover:bg-blue-600 file:cursor-pointer file:border-none file:mr-3 file:transition-all file:duration-300"
+                  className="w-full text-lg border border-slate-400 rounded-md  focus:-outline-offset-1 focus:outline-blue-600 file:bg-(--color-secondary-500) file:px-2 file:py-1 file:text-(--color-primary-50) file:font-semibold file:rounded-md file:hover:bg-(--color-secondary-700) file:cursor-pointer file:border-none file:mr-3 file:transition-all file:duration-300"
                   {...register("document", {
                     required: "This field is required.",
                   })}
@@ -242,7 +241,7 @@ function StudentForm() {
                 >
                   Cancel
                 </button>
-                <button className="px-4 py-2 bg-(--color-primary-400) text-blue-50 rounded-md font-semibold hover:bg-(--color-primary-700) hover:cursor-pointer shadow-md hover:shadow-lg">
+                <button className="px-4 py-2 bg-(--color-secondary-500) text-blue-50 rounded-md font-semibold hover:bg-(--color-secondary-700) hover:cursor-pointer shadow-md hover:shadow-lg">
                   Submit
                 </button>
               </div>
