@@ -52,6 +52,9 @@
   font-family: "Nunito", sans-serif;
 } */
 
-body {
+/* body {
   font-family: "Rubik";
+} */
+*:disabled {
+  cursor: not-allowed;
 }

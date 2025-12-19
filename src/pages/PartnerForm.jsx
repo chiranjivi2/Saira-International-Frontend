@@ -1,14 +1,17 @@
 import { useForm } from "react-hook-form";
 import { postPartnerData } from "../services/api";
 import toast from "react-hot-toast";
+import { useState } from "react";
 
 function PartnerForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const { register, handleSubmit, formState, reset } = useForm();
 
   const { errors, isSubmitting } = formState;
   console.log(errors);
 
   function onSubmit(data) {
+    setIsLoading(true);
     console.log(data);
     const submissionData = new FormData();
     submissionData.append("name", data.name);
@@ -27,9 +30,9 @@ function PartnerForm() {
         const result = await postPartnerData(submissionData);
         toast.success("Form data sent successfully.");
         reset();
-
-        console.log("result:", result);
+        setIsLoading(false);
       } catch (err) {
+        setIsLoading(false);
         const errMessage =
           err?.response?.data?.message || "Something went wrong.";
         console.log(errMessage);
@@ -308,7 +311,7 @@ function PartnerForm() {
                   Cancel
                 </button>
                 <button
-                  disabled={isSubmitting}
+                  disabled={isLoading}
                   className={`px-4 py-2 bg-(--color-primary-400) text-blue-50 rounded-md font-semibold ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-(--color-secondary-500) hover:bg-(--color-secondary-700)"}  hover:cursor-pointer shadow-md hover:shadow-lg`}
                 >
                   Submit

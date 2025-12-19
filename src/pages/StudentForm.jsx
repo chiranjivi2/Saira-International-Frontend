@@ -2,14 +2,17 @@ import { useForm } from "react-hook-form";
 
 import { postStudentData } from "../services/api";
 import toast from "react-hot-toast";
+import { useState } from "react";
 
 function StudentForm() {
   const { register, handleSubmit, formState, reset } = useForm();
 
   const { errors } = formState;
+  const [isLoading, setIsLoading] = useState(false);
   // console.log(errors);
 
   function onSubmit(data) {
+    setIsLoading(true);
     const submissionData = new FormData();
 
     submissionData.append("name", data.name);
@@ -26,9 +29,11 @@ function StudentForm() {
         const result = await postStudentData(submissionData);
         console.log("result:", result);
         reset();
+        setIsLoading(false);
 
         toast.success("form data sent successfully.");
       } catch (err) {
+        setIsLoading(false);
         const errMessage =
           err?.response?.data?.message || "Something went wrong.";
         console.log(errMessage);
@@ -241,7 +246,10 @@ function StudentForm() {
                 >
                   Cancel
                 </button>
-                <button className="px-4 py-2 bg-(--color-secondary-500) text-blue-50 rounded-md font-semibold hover:bg-(--color-secondary-700) hover:cursor-pointer shadow-md hover:shadow-lg">
+                <button
+                  disabled={isLoading}
+                  className="px-4 py-2 bg-(--color-secondary-500) text-blue-50 rounded-md font-semibold hover:bg-(--color-secondary-700) hover:cursor-pointer shadow-md hover:shadow-lg"
+                >
                   Submit
                 </button>
               </div>
