@@ -13,8 +13,8 @@ function Hero() {
       image: "home/Malta.webp",
     },
     {
-      name: "New Zealand",
-      image: "home/NewZealand.webp",
+      name: "South Korea",
+      image: "home/SouthKorea.webp",
     },
   ];
 
