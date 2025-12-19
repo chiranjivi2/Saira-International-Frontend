@@ -46,7 +46,10 @@ function News() {
                   key={index}
                   className="flex flex-col lg:flex-row gap-3  lg:gap-15 shadow-2xl rounded-2xl overflow-hidden mb-12 bg-slate-100"
                 >
-                  <div className="w-full md:w-3/4  lg:w-110 sm:h-80 lg:h-75 shrink-0 rounded-2xl overflow-hidden relative group mx-auto">
+                  <div
+                    className="w-full md:w-3/4  lg:w-110 sm:h-80 lg:h-auto
+                   shrink-0 rounded-2xl overflow-hidden relative group mx-auto"
+                  >
                     <img
                       className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 "
                       src={n.imageURL}
