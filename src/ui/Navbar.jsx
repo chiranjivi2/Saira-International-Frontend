@@ -14,7 +14,7 @@ function Navbar() {
       <div onClick={() => navigate("/")} className="h-full cursor-pointer">
         <img
           src="Saira_logo.png"
-          alt="saira international logo"
+          alt="saira international Education and consultancy's logo"
           className="h-full py-1"
         />
       </div>
