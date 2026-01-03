@@ -72,6 +72,8 @@ function Bank() {
     fetchBankFunds();
   }, []);
 
+  if (!bankFund.length) return null;
+
   return (
     <section className="py-14 bg-[var(--color-primary-50)]">
       <div className="max-w-6xl mx-auto sm:px-8">

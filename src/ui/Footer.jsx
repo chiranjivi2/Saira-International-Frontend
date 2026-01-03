@@ -21,34 +21,34 @@ function Footer() {
             <p className="text-xl leading-relaxed font-light">
               Saira International Education & Consultancy
             </p>
-            <div className="flex gap-2 sm:gap-4 pt-2">
+            <div className="flex gap-4 sm:gap-6 pt-2">
               <a
                 href="https://www.facebook.com/profile.php?id=61583529039472"
                 target="_blank"
                 className="hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
-                <FaFacebook className="h-6 w-6" />
+                <FaFacebook className="h-6 sm:h-8 w-6 sm:w-8" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 target="_blank"
                 className="hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <FaInstagram className="h-6 w-6" />
-              </a>
+              </a> */}
               <a
                 href="https://wa.me/9768827874"
                 target="_blank"
                 className="hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
-                <FaWhatsapp className="h-6 w-6" />
+                <FaWhatsapp className="h-6 sm:h-8 w-6 sm:w-8" />
               </a>
               <a
                 href="https://www.tiktok.com/@sairainternationa?_r=1&_t=ZS-92In4MH0HX3"
                 target="_blank"
                 className="hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
-                <FaTiktok className="h-6 w-6" />
+                <FaTiktok className="h-6 sm:h-8 w-6 sm:w-8" />
               </a>
             </div>
           </div>

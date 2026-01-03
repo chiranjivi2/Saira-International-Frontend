@@ -14,6 +14,7 @@ function ContactUs() {
     qualification: "",
     intrestedIn: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -40,6 +41,7 @@ function ContactUs() {
   };
 
   const handleSubmit = (e) => {
+    setIsLoading(true);
     e.preventDefault();
     console.log(formData);
 
@@ -69,9 +71,11 @@ function ContactUs() {
           qualification: "",
           intrestedIn: "",
         });
+        setIsLoading(false);
 
         console.log("result:", result);
       } catch (err) {
+        setIsLoading(false);
         console.log("Upload failed", err);
         toast.error("error", err);
       }
@@ -356,6 +360,7 @@ function ContactUs() {
                   </div>
 
                   <button
+                    disabled={isLoading}
                     onClick={handleSubmit}
                     className="w-full bg-gradient-to-r from-[var(--color-primary-500)] to-[var(--color-secondary-500)] text-white font-semibold py-4 rounded-lg hover:from-[var(--color-primary-600)] hover:to-[var(--color-secondary-600)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                   >

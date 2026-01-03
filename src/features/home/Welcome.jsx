@@ -8,9 +8,9 @@ function Welcome() {
         <span className="block mb-4 font-medium text-2xl sm:text-3xl text-(--color-secondary-500)">
           Welcome to
         </span>
-        <h2 className="font-semibold  text-3xl sm:text-4xl lg:text-5xl mb-4  text-(--color-primary-500)">
+        <h1 className="font-semibold  text-3xl sm:text-4xl lg:text-5xl mb-4  text-(--color-primary-500)">
           Saira International Education & Consultancy
-        </h2>
+        </h1>
         <p className="text-lg sm:text-2xl mb-10 text-gray-400">
           Your gateway to global oppurtunities.
         </p>
@@ -21,20 +21,20 @@ function Welcome() {
               alt="staff of Saira International Education and Consultancy"
               className="w-full lg:h-[450px] h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           <div className="">
             <p className="text-justify text-lg leading-8 mb-8 ">
-              Saira International Education and Consultancy is Genuine overseas
-              education consultant, we give 100% Transparency for people who
-              want to go Abroad – whether for studying, working, or migrating
-              permanently to their preferred destination. We provide 100%
-              Genuine and Correct information. Saira International Education and
-              Consultancy started in the year 2025, for helping students. We are
-              continuous helping students and providing free guidance since
-              2025. You can visit our social media links such as Instagram,
-              Facebook, Tiktok for more information. You can contact us via
-              WhatsApp/Email.
+              <strong> Saira International Education and Consultancy </strong>{" "}
+              is Genuine overseas education consultant, we give 100%
+              Transparency for people who want to go Abroad – whether for
+              studying, working, or migrating permanently to their preferred
+              destination. We provide 100% Genuine and Correct information.
+              Saira International Education and Consultancy started in the year
+              2025, for helping students. We are continuous helping students and
+              providing free guidance since 2025. You can visit our social media
+              links such as Instagram, Facebook, Tiktok for more information.
+              You can contact us via WhatsApp/Email.
             </p>
             <button
               className="px-8 py-3 font-medium bg-(--color-secondary-500) text-indigo-50 rounded-md block transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-(--color-secondary-700)"
