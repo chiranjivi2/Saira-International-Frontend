@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="flex justify-between items-center h-20 px-4 sm:px-8 md:px-12 lg:px-10 xl:px-12 bg-slate-100 sticky top-0 z-100 font-['Nunito'] ">
       <div onClick={() => navigate("/")} className="h-full cursor-pointer">
         <img
-          src="Saira_logo.png"
+          src="favicon.png"
           alt="saira international Education and consultancy's logo"
           className="h-full py-1"
         />

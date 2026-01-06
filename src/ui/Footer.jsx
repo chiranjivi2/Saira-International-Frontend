@@ -14,7 +14,7 @@ function Footer() {
             <div className="">
               <img
                 className="h-18 sm:h-20 filter brightness-0 invert  "
-                src="Saira_logo.png"
+                src="favicon.png"
                 alt="Saira International Education & Visa Services."
               />
             </div>
