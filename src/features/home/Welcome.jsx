@@ -12,7 +12,7 @@ function Welcome() {
           Saira International Education & Consultancy
         </h1>
         <p className="text-lg sm:text-2xl mb-10 text-gray-400">
-          Your gateway to global oppurtunities.
+          Your gateway to global opportunities.
         </p>
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 items-center p-6">
           <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
