@@ -97,10 +97,6 @@ function ContactUs() {
             <h1 className="text-3xl sm:text-5xl font-bold  animate-fade-in">
               Get In Touch
             </h1>
-            {/* <p className="text-xl text-indigo-100 max-w-2xl mx-auto">
-            Have a question or want to work together? We'd love to hear from
-            you.
-          </p> */}
           </div>
         </div>
 
@@ -368,6 +364,32 @@ function ContactUs() {
                     Send Message
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Map integration */}
+          <div className="max-w-6xl mx-auto mt-12">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+              <div className="p-6 py-4 sm:p-8 bg-linear-to-r from-(--color-primary-500) to-(--color-secondary-500)">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Find Us Here
+                </h2>
+                <p className="text-indigo-100">
+                  Visit our office at Traffic-Chowk, Butwal, Nepal
+                </p>
+              </div>
+              <div className="relative w-full h-80 sm:h-110">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1506.2897602278997!2d83.46516665657093!3d27.701548364072927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996870044b76c7d%3A0xe8e3c6359ddeba4d!2sSaira%20International%20Education%20and%20Consultancy!5e1!3m2!1sen!2snp!4v1768656556721!5m2!1sen!2snp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Office Location Map"
+                />
               </div>
             </div>
           </div>
